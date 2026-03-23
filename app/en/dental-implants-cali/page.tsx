@@ -1,260 +1,153 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { HeaderEN } from "@/components/en/header"
 import { FooterEN } from "@/components/en/footer"
 import { WhatsAppButtonEN } from "@/components/en/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MessageCircle, CheckCircle, Star, Shield, Award, Clock, DollarSign } from "lucide-react"
-import Link from "next/link"
+import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, DollarSign } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Dental Implants in Cali, Colombia | Save 60-70% | Dr. Weider",
-  description: "Get high-quality dental implants in Cali, Colombia. Save 60-70% compared to US prices. Starting from $380 USD per implant. Expert care with Dr. Weider, implantology specialist.",
-  keywords: "dental implants cali colombia, dental implants cost colombia, affordable dental implants, dental tourism colombia, best dental implants cali",
+  title: "Dental Implants in Cali, Colombia | Save 60-70% | Dr Weider",
+  description: "Dental implants in Cali, Colombia with Dr Weider, oral implantology specialist. Restore your smile safely. Learn about the process, benefits and pricing. Save 60-70% vs US prices.",
+  keywords: "dental implants cali, dental implants colombia, dental implant cost colombia, dental implants specialist cali, oral implantology cali, dental tourism colombia",
 }
 
-const benefits = [
-  "Permanent solution for missing teeth",
-  "Looks and feels like natural teeth",
-  "Preserves jawbone and facial structure",
-  "No adhesives or removable parts",
-  "Improved speech and comfort",
-  "Easy maintenance like natural teeth",
-  "Long-lasting results (20+ years)",
-  "Improved confidence and self-esteem",
-]
-
-const candidates = [
-  "Adults with one or more missing teeth",
-  "People with adequate jawbone density",
-  "Those in good overall health",
-  "Non-smokers or willing to quit",
-  "Patients seeking a permanent solution",
-  "Those who want to avoid dentures",
-]
-
-const process = [
+const testimonials = [
   {
-    step: "1",
-    title: "Initial Consultation",
-    description: "Complete evaluation with 3D CT scan and digital X-rays. We assess your bone density, oral health, and create a personalized treatment plan.",
+    name: "Sarah Thompson",
+    text: "After years with uncomfortable dentures, Dr Weider placed my implants. Now I eat anything without worry. Life-changing experience!",
+    rating: 5,
   },
   {
-    step: "2",
-    title: "Treatment Planning",
-    description: "Using digital simulation, we plan the exact position of your implant for optimal results. You'll see the expected outcome before treatment.",
+    name: "Michael Roberts", 
+    text: "I was scared about the procedure but it was much simpler than expected. The doctor explains everything patiently. Highly recommended.",
+    rating: 5,
   },
   {
-    step: "3",
-    title: "Implant Placement",
-    description: "The titanium implant is surgically placed in your jawbone. The procedure is minimally invasive and performed under local anesthesia.",
-  },
-  {
-    step: "4",
-    title: "Healing Period",
-    description: "The implant integrates with your bone over 3-6 months. During this time, you may wear a temporary crown for aesthetics.",
-  },
-  {
-    step: "5",
-    title: "Crown Placement",
-    description: "Once healed, a custom ceramic crown is attached to the implant. Your new tooth matches your natural teeth perfectly.",
+    name: "Jennifer Davis",
+    text: "Excellent care and results. My implants look completely natural. Saved over 60% compared to US prices. Worth the trip!",
+    rating: 5,
   },
 ]
 
-export default function DentalImplantsPage() {
+const faqs = [
+  {
+    question: "Is getting a dental implant painful?",
+    answer: "The procedure is performed under local anesthesia, so you won't feel pain during surgery. Afterwards, it's normal to have mild discomfort that is easily controlled with medication. Most patients report less discomfort than expected.",
+  },
+  {
+    question: "How long do dental implants last?",
+    answer: "With proper care, dental implants can last a lifetime. They are the most durable solution for replacing missing teeth, unlike dentures that need replacement every few years.",
+  },
+  {
+    question: "Is the procedure safe?",
+    answer: "Yes. Dental implants have a 95-98% success rate. We use high-quality titanium implants and state-of-the-art technology to ensure safe and predictable results.",
+  },
+  {
+    question: "Am I a candidate for implants?",
+    answer: "Most adults in good general health are candidates. Adequate bone is required, although this can be resolved with grafts. During the evaluation we assess your specific case with no obligation.",
+  },
+]
+
+export default function DentalImplantsCali() {
   return (
     <>
       <HeaderEN />
       <main>
-        {/* Hero Section */}
+        {/* 1. HERO - First Screen */}
         <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary via-primary/95 to-primary/90">
           <div className="absolute inset-0 bg-[url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent_Portfolio_Key_Visual-gi1i4cWtYpEBOJ2R0leY0uE2wIVpPt.png')] bg-cover bg-center opacity-10" />
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-                <DollarSign className="w-4 h-4 text-accent" />
-                <span className="text-white/90 text-sm font-medium">Save up to 60-70% compared to US prices</span>
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Dental Implants in Cali, Colombia
-              </h1>
-              <p className="mt-6 text-xl text-white/85 leading-relaxed">
-                Restore your smile with high-quality dental implants at a fraction of US costs. 
-                Expert care from Dr. Weider, a certified implantology specialist with over 500 successful implants.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold shadow-xl"
-                >
-                  <a
-                    href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants%20in%20Cali"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <MessageCircle className="h-5 w-5" />
-                    Get a Free Quote
-                  </a>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 text-base px-8 py-6"
-                >
-                  <Link href="/en/dental-implants-price-cali">
-                    View Pricing
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What Are Dental Implants */}
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide uppercase">
-                  What Are Dental Implants?
+                <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold">
+                  <DollarSign className="h-4 w-4" />
+                  Save 60-70% vs US Prices
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
-                  The gold standard for <span className="text-primary">replacing missing teeth</span>
-                </h2>
-                <p className="mt-6 text-muted-foreground leading-relaxed">
-                  Dental implants are titanium posts that are surgically placed into your jawbone to serve as 
-                  artificial tooth roots. Once healed, they provide a stable foundation for replacement teeth 
-                  that look, feel, and function like natural teeth.
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                  Dental Implants in Cali with Dr Weider
+                </h1>
+                <p className="mt-6 text-xl text-white/90 leading-relaxed">
+                  Restore your smile with confidence and enjoy life without discomfort
                 </p>
-                <p className="mt-4 text-muted-foreground leading-relaxed">
-                  Unlike dentures or bridges, implants fuse with your jawbone through a process called 
-                  osseointegration, creating a permanent solution that can last a lifetime with proper care.
-                </p>
-                <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-                  <div className="p-4 bg-muted/30 rounded-xl">
-                    <p className="text-2xl font-bold text-primary">98%</p>
-                    <p className="text-sm text-muted-foreground">Success Rate</p>
-                  </div>
-                  <div className="p-4 bg-muted/30 rounded-xl">
-                    <p className="text-2xl font-bold text-accent">20+</p>
-                    <p className="text-sm text-muted-foreground">Years Lifespan</p>
-                  </div>
-                  <div className="p-4 bg-muted/30 rounded-xl">
-                    <p className="text-2xl font-bold text-primary">500+</p>
-                    <p className="text-sm text-muted-foreground">Implants Placed</p>
-                  </div>
+                
+                {/* Highly visible bullets */}
+                <ul className="mt-6 space-y-3">
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
+                    <span className="text-lg">Safe and predictable procedure</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
+                    <span className="text-lg">Aesthetic and functional results</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
+                    <span className="text-lg">Personalized attention in English</span>
+                  </li>
+                </ul>
+
+                {/* CTA Buttons */}
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-xl">
+                    <a
+                      href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants%20in%20Cali"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <MessageCircle className="h-5 w-5" />
+                      Schedule your consultation via WhatsApp
+                    </a>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 font-semibold text-lg px-8 py-6">
+                    <a
+                      href="https://wa.me/573235944931?text=Hi,%20I%20want%20to%20speak%20with%20the%20specialist%20about%20dental%20implants"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <Phone className="h-5 w-5" />
+                      Talk to the specialist now
+                    </a>
+                  </Button>
                 </div>
               </div>
-              <div className="relative">
+              <div className="hidden lg:block">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Neodent_Portfolio_Key_Visual-gi1i4cWtYpEBOJ2R0leY0uE2wIVpPt.png"
-                  alt="Dental implant illustration"
-                  className="rounded-2xl shadow-xl"
+                  alt="Dental implants in Cali - Dr Weider"
+                  className="rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="py-20 bg-muted/30">
+        {/* 2. IMMEDIATE SOCIAL PROOF */}
+        <section className="py-12 bg-white border-b">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="inline-block mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold tracking-wide uppercase">
-                Benefits
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
-                Why choose <span className="text-primary">dental implants?</span>
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3 p-4 bg-white rounded-xl border border-border">
-                  <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground text-sm">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Who Is a Candidate */}
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2983.JPG-Uq8RpwOmPxRm6G2zNO5kX76aAvEqYf.jpeg"
-                  alt="Successful implant case"
-                  className="rounded-2xl shadow-xl"
-                />
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 fill-accent text-accent" />
+                ))}
               </div>
-              <div className="order-1 lg:order-2">
-                <span className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide uppercase">
-                  Candidacy
-                </span>
-                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
-                  Are you a <span className="text-primary">good candidate?</span>
-                </h2>
-                <p className="mt-6 text-muted-foreground leading-relaxed">
-                  Most adults with missing teeth are good candidates for dental implants. 
-                  During your consultation, Dr. Weider will evaluate your specific situation.
-                </p>
-                <ul className="mt-6 space-y-3">
-                  {candidates.map((candidate, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-accent" />
-                      <span className="text-foreground">{candidate}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  asChild
-                  size="lg"
-                  className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                >
-                  <a
-                    href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20to%20know%20if%20I%20am%20a%20candidate%20for%20dental%20implants"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <MessageCircle className="h-5 w-5" />
-                    Check Your Eligibility
-                  </a>
-                </Button>
-              </div>
+              <p className="text-xl font-semibold text-foreground">
+                International patients already restored their smiles in Cali
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* Step by Step Process */}
-        <section className="py-20 bg-muted/30">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="inline-block mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold tracking-wide uppercase">
-                The Process
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
-                Step-by-step <span className="text-primary">implant procedure</span>
-              </h2>
-            </div>
-            <div className="space-y-6">
-              {process.map((item, index) => (
-                <Card key={index} className="border-border hover:border-primary/30 transition-colors">
-                  <CardContent className="p-6 flex gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-bold text-lg">
-                        {item.step}
-                      </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="bg-muted/30 border-0">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-1 mb-3">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                      ))}
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
-                    </div>
+                    <p className="text-muted-foreground italic mb-4">"{testimonial.text}"</p>
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -262,85 +155,367 @@ export default function DentalImplantsPage() {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-20 bg-primary text-white">
+        {/* 3. PROBLEM - Emotional connection */}
+        <section className="py-20 bg-muted/30">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <span className="inline-block mb-4 px-4 py-2 bg-white/10 text-white rounded-full text-sm font-semibold tracking-wide uppercase">
-                Why Choose Us
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold">
-                Why choose Dr. Weider for your implants?
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/10 flex items-center justify-center mb-4">
-                  <DollarSign className="w-8 h-8 text-accent" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                  Have you lost a tooth or feel uncomfortable with your smile?
+                </h2>
+                <div className="mt-6 space-y-4">
+                  <div className="flex items-start gap-4">
+                    <AlertCircle className="h-6 w-6 text-destructive flex-shrink-0 mt-1" />
+                    <p className="text-lg text-muted-foreground">
+                      <strong className="text-foreground">Insecurity when smiling:</strong> You avoid showing your teeth in photos or when talking to others.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <AlertCircle className="h-6 w-6 text-destructive flex-shrink-0 mt-1" />
+                    <p className="text-lg text-muted-foreground">
+                      <strong className="text-foreground">Difficulty eating:</strong> You can't enjoy your favorite foods because chewing is difficult.
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <AlertCircle className="h-6 w-6 text-destructive flex-shrink-0 mt-1" />
+                    <p className="text-lg text-muted-foreground">
+                      <strong className="text-foreground">Bone loss:</strong> Every day without replacing the tooth, you lose more jawbone.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Save 60-70%</h3>
-                <p className="text-white/70 text-sm">Compared to US prices without compromising quality</p>
+                <div className="mt-8 p-6 bg-primary/5 rounded-xl border-l-4 border-primary">
+                  <p className="text-lg font-semibold text-foreground">
+                    Dental implants are the most effective solution to restore your smile and quality of life.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                    <a
+                      href="https://wa.me/573235944931?text=Hi,%20I%20want%20to%20restore%20my%20smile%20with%20dental%20implants"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <MessageCircle className="h-5 w-5" />
+                      I want to restore my smile
+                    </a>
+                  </Button>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/10 flex items-center justify-center mb-4">
-                  <Award className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Expert Specialist</h3>
-                <p className="text-white/70 text-sm">Certified implantologist with 500+ successful implants</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/10 flex items-center justify-center mb-4">
-                  <Shield className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Premium Materials</h3>
-                <p className="text-white/70 text-sm">High-quality titanium implants and ceramic crowns</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/10 flex items-center justify-center mb-4">
-                  <Star className="w-8 h-8 text-accent" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">5.0 Rating</h3>
-                <p className="text-white/70 text-sm">Perfect Google rating from happy patients</p>
+              <div className="grid grid-cols-2 gap-4">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2983.JPG-Uq8RpwOmPxRm6G2zNO5kX76aAvEqYf.jpeg"
+                  alt="Crown on dental implant"
+                  className="rounded-xl shadow-lg"
+                />
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2993.JPG-WO713zMc9atFAEDO1oyLAHgpUhrb9Z.jpeg"
+                  alt="Oral rehabilitation with implants"
+                  className="rounded-xl shadow-lg mt-8"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* 4. SOLUTION - Clear selling point */}
         <section className="py-20 bg-white">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
-              Ready to restore your smile?
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Contact us today for a free consultation. We'll evaluate your case and provide a personalized treatment plan.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold"
-              >
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                Dental implants: the best solution for replacing missing teeth
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                A dental implant is a small titanium screw that is placed in the jawbone 
+                to replace the root of a missing tooth. A ceramic crown is placed on top 
+                that looks and functions exactly like a natural tooth.
+              </p>
+              <div className="mt-8 grid sm:grid-cols-2 gap-6 text-left">
+                <Card className="border-2 border-primary/20 bg-primary/5">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary" />
+                      Dental Implants
+                    </h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>Fixed and permanent</li>
+                      <li>Feel like natural teeth</li>
+                      <li>No adhesives needed</li>
+                      <li>Preserve the bone</li>
+                      <li>Last a lifetime</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card className="border border-muted">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-lg text-muted-foreground mb-4 flex items-center gap-2">
+                      Removable Dentures
+                    </h3>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>Take in and out</li>
+                      <li>Can move while eating</li>
+                      <li>Require adhesives</li>
+                      <li>Don't prevent bone loss</li>
+                      <li>Last 5-10 years</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. BENEFITS - Scannable */}
+        <section className="py-20 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                Benefits of Dental Implants
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Zap className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Chewing function</h3>
+                  <p className="text-sm text-muted-foreground">Eat any food without limitations</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Award className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Natural aesthetics</h3>
+                  <p className="text-sm text-muted-foreground">Look exactly like natural teeth</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Shield className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Preserves bone</h3>
+                  <p className="text-sm text-muted-foreground">Prevents progressive bone loss</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Clock className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">High durability</h3>
+                  <p className="text-sm text-muted-foreground">Last a lifetime with proper care</p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="text-center mt-10">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 <a
-                  href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants%20in%20Cali"
+                  href="https://wa.me/573235944931?text=Hi,%20I%20want%20to%20learn%20more%20about%20the%20benefits%20of%20dental%20implants"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
                   <MessageCircle className="h-5 w-5" />
-                  Book Your Consultation
+                  Free consultation
                 </a>
               </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-base px-8 py-6"
-              >
-                <Link href="/en/dental-implants-price-cali">
-                  View Pricing
-                </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. PROCESS - Reduces fear */}
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                What is the process like?
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                A simple procedure in 4 steps
+              </p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-2xl">
+                  1
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Evaluation</h3>
+                <p className="text-muted-foreground text-sm">Complete evaluation with digital X-rays to plan your treatment</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-2xl">
+                  2
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Placement</h3>
+                <p className="text-muted-foreground text-sm">Procedure with local anesthesia, no pain or discomfort</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-2xl">
+                  3
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Healing</h3>
+                <p className="text-muted-foreground text-sm">The implant integrates with your bone in 3-4 months</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-2xl">
+                  4
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Final crown</h3>
+                <p className="text-muted-foreground text-sm">We place the ceramic crown. Your complete smile</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. PRICING */}
+        <section className="py-20 bg-muted/30">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                How much does a dental implant cost in Cali?
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                The price of a dental implant in Cali, Colombia depends on each particular case. 
+                During the evaluation we clinically assess your needs and provide you with 
+                a personalized quote with no obligation.
+              </p>
+              <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/20">
+                <p className="text-lg font-semibold text-foreground">
+                  Save 60-70% compared to US prices with the same quality materials
+                </p>
+              </div>
+              <div className="mt-8">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-10">
+                  <a
+                    href="https://wa.me/573235944931?text=Hi,%20I%20want%20to%20know%20the%20price%20of%20dental%20implants%20in%20Cali"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    Get a free quote via WhatsApp
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. OBJECTIONS - FAQ */}
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                We answer your questions
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto space-y-6">
+              {faqs.map((faq, index) => (
+                <Card key={index} className="bg-muted/30 border-0">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-foreground mb-3">{faq.question}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                <a
+                  href="https://wa.me/573235944931?text=Hi,%20I%20have%20questions%20about%20dental%20implants"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Have more questions? Contact us
+                </a>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* 9. URGENCY / STRONG CTA */}
+        <section className="py-16 bg-accent">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-accent-foreground">
+              Schedule your evaluation today and receive a personalized treatment plan
+            </h2>
+            <p className="mt-4 text-lg text-accent-foreground/80">
+              The first consultation is free. We evaluate your case and give you options.
+            </p>
+            <div className="mt-8">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold text-lg px-12 py-6 shadow-xl">
+                <a
+                  href="https://wa.me/573235944931?text=Hi,%20I%20want%20to%20schedule%20my%20evaluation%20for%20dental%20implants%20in%20Cali"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle className="h-6 w-6" />
+                  Schedule via WhatsApp
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. CLOSING WITH AUTHORITY - The Doctor */}
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="inline-block mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                  Your implant specialist
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                  Treated by Dr Weider
+                </h2>
+                <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+                  Dentist with over 10 years of experience and specialized training in oral implantology. 
+                  He has performed hundreds of successful dental implant procedures in Cali.
+                </p>
+                <ul className="mt-6 space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Oral implantology specialist</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Continuous training in the latest techniques</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">Focus on minimally invasive procedures</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-muted-foreground">English-speaking personalized attention</span>
+                  </li>
+                </ul>
+                <div className="mt-8">
+                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                    <a
+                      href="https://wa.me/573235944931?text=Hello%20Dr%20Weider,%20I%20want%20to%20schedule%20an%20appointment%20for%20dental%20implants"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <MessageCircle className="h-5 w-5" />
+                      Contact Dr Weider
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="w-80 h-80 bg-primary/10 rounded-full flex items-center justify-center">
+                  <User className="w-40 h-40 text-primary/30" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
