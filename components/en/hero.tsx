@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { MessageCircle, ChevronDown, Star, DollarSign, Award, Globe } from "lucide-react"
+import { MessageCircle, ChevronDown, Star, DollarSign, Award, Globe, CheckCircle } from "lucide-react"
 
 export function HeroEN() {
   return (
@@ -28,20 +28,35 @@ export function HeroEN() {
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <span className="text-white/90 text-sm font-medium">5.0 on Google Reviews</span>
+              <span className="text-white/90 text-sm font-medium">Trusted by patients in Cali and international visitors</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-tight">
-              Dental Implants in Cali{" "}
-              <span className="text-accent">with Dr. Weider</span>
+              Dental Implants in{" "}
+              <span className="text-accent">Cali, Colombia</span>
             </h1>
             
-            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">
-              Specialist in dental implants, dental prosthesis, smile design and oral rehabilitation in Cali, Colombia. 
-              Restore your smile with state-of-the-art technology. Save 60-70% compared to US prices.
+            <p className="mt-6 text-xl sm:text-2xl text-white/90 max-w-xl leading-relaxed font-medium">
+              High-quality dental care at up to 70% lower cost than in the US
             </p>
 
-            {/* International Focus */}
+            {/* Highly visible bullets */}
+            <ul className="mt-8 space-y-3 max-w-lg lg:mx-0 mx-auto">
+              <li className="flex items-center gap-3 text-white">
+                <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
+                <span className="text-lg">Experienced implant specialist</span>
+              </li>
+              <li className="flex items-center gap-3 text-white">
+                <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
+                <span className="text-lg">Modern techniques and materials</span>
+              </li>
+              <li className="flex items-center gap-3 text-white">
+                <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
+                <span className="text-lg">Personalized treatment in English</span>
+              </li>
+            </ul>
+
+            {/* International Focus Stats */}
             <div className="mt-8 grid grid-cols-3 gap-4 max-w-lg lg:mx-0 mx-auto">
               <div className="flex flex-col items-center text-center p-3 bg-white/10 rounded-lg backdrop-blur-sm">
                 <DollarSign className="w-6 h-6 text-accent mb-1" />
@@ -70,7 +85,22 @@ export function HeroEN() {
                   className="flex items-center gap-3"
                 >
                   <MessageCircle className="h-6 w-6" />
-                  Book your consultation via WhatsApp
+                  Get your personalized treatment plan
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white/30 text-white hover:bg-white/10 text-base px-8 py-7 font-semibold"
+              >
+                <a
+                  href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20to%20speak%20about%20dental%20tourism%20in%20Cali"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3"
+                >
+                  Contact us via WhatsApp
                 </a>
               </Button>
             </div>
@@ -98,7 +128,7 @@ export function HeroEN() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC05019-LJEfAuhcjABM1x44xouovrgNqeS6zQ.jpg"
-                alt="Doctor Weider Gutierrez"
+                alt="Doctor Weider Gutierrez - Dental Implant Specialist in Cali"
                 className="w-full h-[500px] object-cover"
                 style={{ objectPosition: "center 30%" }}
               />
@@ -110,7 +140,7 @@ export function HeroEN() {
             {/* Floating badge */}
             <div className="absolute -bottom-4 -left-4 z-20 bg-accent text-accent-foreground px-6 py-3 rounded-xl shadow-lg">
               <p className="font-bold text-lg">Team of Professionals</p>
-              <p className="text-sm">Personalized care</p>
+              <p className="text-sm">Personalized care in English</p>
             </div>
           </div>
         </div>

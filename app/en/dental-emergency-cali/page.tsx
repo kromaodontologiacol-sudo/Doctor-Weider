@@ -74,11 +74,13 @@ export default function DentalEmergencyPage() {
                 <span className="text-white/90 text-sm font-medium">Same-Day Emergency Care</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Emergency Dentist in Cali
+                Emergency Dentist in Cali - Fast and Reliable Care
               </h1>
               <p className="mt-6 text-xl text-white/85 leading-relaxed">
-                Experiencing dental pain or emergency? We provide immediate care for all dental emergencies. 
-                Don't wait - contact us now.
+                Experiencing dental pain or emergency? We provide immediate care for all dental emergencies.
+              </p>
+              <p className="mt-4 text-2xl font-semibold text-yellow-300">
+                Same-day appointments available - Don't wait!
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <Button

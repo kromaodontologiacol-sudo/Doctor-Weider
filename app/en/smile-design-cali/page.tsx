@@ -73,11 +73,11 @@ export default function SmileDesignPage() {
                 <span className="text-white/90 text-sm font-medium">Preview Your New Smile</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Smile Design in Cali
+                Transform Your Smile with High-Quality Cosmetic Dentistry
               </h1>
               <p className="mt-6 text-xl text-white/85 leading-relaxed">
-                Transform your smile with our digital smile design process. 
-                See your results before treatment begins and achieve the smile of your dreams.
+                Digital smile design in Cali, Colombia. Preview your new smile before treatment begins.
+                Veneers, whitening, and complete smile makeovers at affordable prices.
               </p>
               <Button
                 asChild

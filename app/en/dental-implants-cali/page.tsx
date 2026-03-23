@@ -5,7 +5,7 @@ import { FooterEN } from "@/components/en/footer"
 import { WhatsAppButtonEN } from "@/components/en/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, DollarSign, ArrowRight } from "lucide-react"
+import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, DollarSign, ArrowRight, Globe, Plane, MapPin, Send, FileImage, Calendar, Heart } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Dental Implants in Cali, Colombia | Save 60-70% | Dr Weider",
@@ -33,20 +33,28 @@ const testimonials = [
 
 const faqs = [
   {
+    question: "Is it safe to travel for dental treatment?",
+    answer: "Absolutely. Colombia has world-class dental professionals and modern facilities. Dr Weider uses the same premium implant brands (Neodent/Straumann) used in the US and Europe. Thousands of international patients travel to Cali each year for dental care.",
+  },
+  {
+    question: "How long do I need to stay in Cali?",
+    answer: "For a single implant, plan for 2 visits: the first trip (3-5 days) for evaluation and implant placement, then return in 3-4 months (2-3 days) for the final crown. We can coordinate timing to fit your schedule.",
+  },
+  {
+    question: "Do you speak English?",
+    answer: "Yes! Dr Weider and our team provide full support in English. From your first WhatsApp message to post-treatment follow-up, we communicate clearly in English throughout your entire experience.",
+  },
+  {
+    question: "Can I send my X-rays before traveling?",
+    answer: "Yes, we encourage this! Send your panoramic X-ray or CT scan via WhatsApp and we'll provide a preliminary evaluation and treatment plan before you book your trip. This helps you plan your budget and schedule.",
+  },
+  {
     question: "Is getting a dental implant painful?",
     answer: "The procedure is performed under local anesthesia, so you won't feel pain during surgery. Afterwards, it's normal to have mild discomfort that is easily controlled with medication. Most patients report less discomfort than expected.",
   },
   {
     question: "How long do dental implants last?",
     answer: "With proper care, dental implants can last a lifetime. They are the most durable solution for replacing missing teeth, unlike dentures that need replacement every few years.",
-  },
-  {
-    question: "Is the procedure safe?",
-    answer: "Yes. Dental implants have a 95-98% success rate. We use high-quality titanium implants and state-of-the-art technology to ensure safe and predictable results.",
-  },
-  {
-    question: "Am I a candidate for implants?",
-    answer: "Most adults in good general health are candidates. Adequate bone is required, although this can be resolved with grafts. During the evaluation we assess your specific case with no obligation.",
   },
 ]
 
@@ -122,6 +130,20 @@ export default function DentalImplantsCali() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* NEW: SMILE WITH CONFIDENCE - Emotional Section */}
+        <section className="py-12 bg-primary text-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <Heart className="h-12 w-12 mx-auto text-accent mb-4" />
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">
+              Smile with Confidence Again
+            </h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Missing teeth can affect your confidence, your ability to eat, and even your facial appearance. 
+              Dental implants give you back your smile and your quality of life.
+            </p>
           </div>
         </section>
 
@@ -262,6 +284,133 @@ export default function DentalImplantsCali() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY CHOOSE COLOMBIA FOR DENTAL IMPLANTS */}
+        <section className="py-20 bg-accent/5">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">
+                <Globe className="h-4 w-4" />
+                Dental Tourism
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                Why Choose Colombia for Dental Implants?
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                    <DollarSign className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Save 60-70%</h3>
+                  <p className="text-sm text-muted-foreground">Compared to US prices with the same quality materials</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                    <Award className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">High-Quality Care</h3>
+                  <p className="text-sm text-muted-foreground">Premium implant brands and modern technology</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                    <Clock className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Faster Timelines</h3>
+                  <p className="text-sm text-muted-foreground">No long waiting lists - get treated on your schedule</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-white border-0 shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                    <User className="h-7 w-7 text-accent" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">Personalized Attention</h3>
+                  <p className="text-sm text-muted-foreground">Direct communication with your specialist in English</p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="text-center mt-10">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                <a
+                  href="https://wa.me/573235944931?text=Hi,%20I%20am%20interested%20in%20dental%20tourism%20in%20Colombia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Learn more about dental tourism
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS FOR INTERNATIONAL PATIENTS */}
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                <Plane className="h-4 w-4" />
+                For International Patients
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
+                How It Works for International Patients
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                We make dental tourism simple and stress-free
+              </p>
+            </div>
+            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary text-white rounded-full flex items-center justify-center">
+                  <Send className="h-7 w-7" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">1. Contact Us</h3>
+                <p className="text-muted-foreground text-sm">Send us a WhatsApp message with your dental concern</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary text-white rounded-full flex items-center justify-center">
+                  <FileImage className="h-7 w-7" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">2. Send X-rays</h3>
+                <p className="text-muted-foreground text-sm">Share your X-rays or photos for a preliminary evaluation</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary text-white rounded-full flex items-center justify-center">
+                  <Calendar className="h-7 w-7" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">3. Get Your Plan</h3>
+                <p className="text-muted-foreground text-sm">Receive your personalized treatment plan and quote</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary text-white rounded-full flex items-center justify-center">
+                  <Plane className="h-7 w-7" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">4. Travel & Smile</h3>
+                <p className="text-muted-foreground text-sm">Book your trip and get your treatment done</p>
+              </div>
+            </div>
+            <div className="text-center mt-10">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold">
+                <a
+                  href="https://wa.me/573235944931?text=Hi,%20I%20am%20an%20international%20patient%20interested%20in%20dental%20implants.%20Can%20I%20send%20my%20X-rays?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Start your evaluation now
+                </a>
+              </Button>
             </div>
           </div>
         </section>

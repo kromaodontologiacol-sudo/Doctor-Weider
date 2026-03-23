@@ -9,10 +9,9 @@ import { LanguageSwitcher } from "@/components/language-switcher"
 const navItems = [
   { href: "/en", label: "Home" },
   { href: "/en/dental-implants-cali", label: "Implants" },
-  { href: "/en/dental-prosthesis-cali", label: "Prosthesis" },
-  { href: "/en/dental-emergency-cali", label: "Emergency" },
+  { href: "/en/dental-tourism-colombia", label: "Dental Tourism" },
   { href: "/en/smile-design-cali", label: "Smile Design" },
-  { href: "/en/blog", label: "Blog" },
+  { href: "/en/dental-implants-price-cali", label: "Pricing" },
   { href: "/en#contact", label: "Contact" },
 ]
 

@@ -50,11 +50,11 @@ export default function DentalProsthesisPage() {
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Dental Prosthesis in Cali
+                Affordable Solutions for Missing Teeth in Cali, Colombia
               </h1>
               <p className="mt-6 text-xl text-white/85 leading-relaxed">
-                Restore your smile with high-quality dental prostheses. From crowns and bridges to 
-                dentures and implant-supported restorations, we offer solutions for every need.
+                Restore your smile with high-quality dental prostheses at up to 70% lower cost than in the US. 
+                From crowns and bridges to dentures and implant-supported restorations, we offer solutions for every need and budget.
               </p>
               <Button
                 asChild
