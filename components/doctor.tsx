@@ -1,22 +1,31 @@
 import { Button } from "@/components/ui/button"
-import { MessageCircle, Award, GraduationCap, Heart, Users, Sparkles, Shield } from "lucide-react"
+import { MessageCircle, GraduationCap, Users, Sparkles, Shield } from "lucide-react"
+import type { Dictionary } from "@/lib/i18n/dictionaries"
 
-export function Doctor() {
+const credentialIcons = [GraduationCap, Shield, Users, Sparkles]
+
+interface DoctorProps {
+  dictionary: Dictionary
+}
+
+export function Doctor({ dictionary }: DoctorProps) {
+  const t = dictionary.doctor
+  const whatsappMessage = encodeURIComponent(dictionary.whatsapp.scheduleMessage)
+
   return (
     <section id="doctor" className="py-20 bg-muted/30 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold tracking-wide uppercase">
-            Nuestro Equipo
+            {t.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground">
-            Un equipo comprometido con{" "}
-            <span className="text-primary">tu sonrisa</span>
+            {t.title}{" "}
+            <span className="text-primary">{t.titleHighlight}</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Profesionales especializados trabajando juntos para brindarte la mejor 
-            atención odontológica en Cali.
+            {t.subtitle}
           </p>
         </div>
 
@@ -28,7 +37,7 @@ export function Doctor() {
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC05019-LJEfAuhcjABM1x44xouovrgNqeS6zQ.jpg"
-                    alt="Dr. Weider Gutiérrez en el consultorio"
+                    alt={t.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -37,7 +46,7 @@ export function Doctor() {
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSC04054-ycMkmDFGxRiAzl0HAQwAYWD89W4uqu.jpg"
-                    alt="Dr. Weider Gutiérrez sonriendo"
+                    alt={t.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -51,71 +60,46 @@ export function Doctor() {
           {/* Content */}
           <div>
             <h3 className="text-2xl sm:text-3xl font-serif font-bold text-foreground leading-tight">
-              Dr. Weider Gutiérrez
+              {t.name}
             </h3>
             <p className="mt-2 text-lg text-primary font-medium">
-              Director - Especialista en Implantología Oral y Reconstructiva
+              {t.role}
             </p>
 
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Odontólogo especializado en implantología oral y reconstructiva, con 
-              certificación en el manejo odontológico del paciente sistémicamente 
-              comprometido. Lidera un equipo multidisciplinario de profesionales 
-              comprometidos con transformar sonrisas en Cali.
+              {t.bio}
             </p>
 
             <div className="mt-8 grid sm:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/60">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Implantología Oral</p>
-                  <p className="text-xs text-muted-foreground">Especialista Certificado</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/60">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Paciente Sistémico</p>
-                  <p className="text-xs text-muted-foreground">Manejo Especializado</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/60">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Equipo Profesional</p>
-                  <p className="text-xs text-muted-foreground">Atención Integral</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/60">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Sparkles className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Tecnología Digital</p>
-                  <p className="text-xs text-muted-foreground">Equipos de Vanguardia</p>
-                </div>
-              </div>
+              {t.credentials.map((credential, index) => {
+                const Icon = credentialIcons[index]
+                return (
+                  <div key={index} className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/60">
+                    <div className={`w-10 h-10 rounded-full ${index % 2 === 0 ? 'bg-primary/10' : 'bg-accent/10'} flex items-center justify-center flex-shrink-0`}>
+                      <Icon className={`w-5 h-5 ${index % 2 === 0 ? 'text-primary' : 'text-accent'}`} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">{credential.title}</p>
+                      <p className="text-xs text-muted-foreground">{credential.subtitle}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
 
             {/* Team stats */}
             <div className="mt-8 flex items-center gap-8 flex-wrap">
               <div className="text-center">
-                <p className="text-3xl font-bold text-primary">+2000</p>
-                <p className="text-sm text-muted-foreground">Pacientes felices</p>
+                <p className="text-3xl font-bold text-primary">{t.stats.patients.value}</p>
+                <p className="text-sm text-muted-foreground">{t.stats.patients.label}</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-accent">5.0</p>
-                <p className="text-sm text-muted-foreground">Google Reviews</p>
+                <p className="text-3xl font-bold text-accent">{t.stats.rating.value}</p>
+                <p className="text-sm text-muted-foreground">{t.stats.rating.label}</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-primary">22+</p>
-                <p className="text-sm text-muted-foreground">Opiniones positivas</p>
+                <p className="text-3xl font-bold text-primary">{t.stats.reviews.value}</p>
+                <p className="text-sm text-muted-foreground">{t.stats.reviews.label}</p>
               </div>
             </div>
 
@@ -125,13 +109,13 @@ export function Doctor() {
               className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold shadow-lg"
             >
               <a
-                href="https://wa.me/573235944931?text=Hola,%20quisiera%20agendar%20una%20cita"
+                href={`https://wa.me/573235944931?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
                 <MessageCircle className="h-5 w-5" />
-                Agenda tu cita con nuestro equipo
+                {t.cta}
               </a>
             </Button>
           </div>

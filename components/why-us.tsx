@@ -1,64 +1,33 @@
 import { Shield, Cpu, Heart, CheckCircle, Award, Sparkles } from "lucide-react"
+import type { Dictionary } from "@/lib/i18n/dictionaries"
 
-const reasons = [
-  {
-    icon: Cpu,
-    title: "Planeación Digital Personalizada",
-    description:
-      "Utilizamos software de simulación 3D y tomografía computarizada para planificar cada tratamiento con precisión milimétrica.",
-  },
-  {
-    icon: Shield,
-    title: "Protocolos de Bioseguridad",
-    description:
-      "Cumplimos con los más estrictos protocolos de esterilización y bioseguridad para tu tranquilidad.",
-  },
-  {
-    icon: Award,
-    title: "Tecnología Avanzada",
-    description:
-      "Equipos de última generación incluyendo scanner intraoral, radiografía digital y sistema CAD/CAM.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Resultados Funcionales y Estéticos",
-    description:
-      "Cada tratamiento busca no solo la funcionalidad sino también la estética natural de tu sonrisa.",
-  },
-  {
-    icon: Heart,
-    title: "Atención Cálida y Profesional",
-    description:
-      "Un equipo humano comprometido con tu bienestar, que te acompaña en cada paso de tu tratamiento.",
-  },
-  {
-    icon: Sparkles,
-    title: "Experiencia Comprobada",
-    description:
-      "Más de 15 años de experiencia transformando sonrisas y más de 500 implantes exitosos.",
-  },
-]
+const icons = [Cpu, Shield, Award, CheckCircle, Heart, Sparkles]
 
-export function WhyUs() {
+interface WhyUsProps {
+  dictionary: Dictionary
+}
+
+export function WhyUs({ dictionary }: WhyUsProps) {
+  const t = dictionary.whyUs
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold tracking-wide uppercase">
-            Nuestra Diferencia
+            {t.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground">
-            ¿Por qué <span className="text-primary">elegirnos</span>?
+            {t.title} <span className="text-primary">{t.titleHighlight}</span>?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Combinamos experiencia, tecnología y un trato humano excepcional 
-            para ofrecerte la mejor atención odontológica en Cali.
+            {t.subtitle}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon
+          {t.reasons.map((reason, index) => {
+            const Icon = icons[index]
             return (
               <div
                 key={index}

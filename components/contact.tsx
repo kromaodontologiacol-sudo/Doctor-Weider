@@ -5,9 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Phone, Clock, MessageCircle, Mail, Building } from "lucide-react"
+import { MapPin, Phone, Clock, MessageCircle, Building } from "lucide-react"
+import type { Dictionary } from "@/lib/i18n/dictionaries"
 
-export function Contact() {
+interface ContactProps {
+  dictionary: Dictionary
+}
+
+export function Contact({ dictionary }: ContactProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,9 +20,14 @@ export function Contact() {
     message: "",
   })
 
+  const t = dictionary.contact
+  const locale = dictionary.locale
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const whatsappMessage = `Hola, soy ${formData.name}. ${formData.message}. Mi correo es ${formData.email} y mi teléfono ${formData.phone}.`
+    const whatsappMessage = locale === "en" 
+      ? `Hi, I'm ${formData.name}. ${formData.message}. My email is ${formData.email} and my phone is ${formData.phone}.`
+      : `Hola, soy ${formData.name}. ${formData.message}. Mi correo es ${formData.email} y mi teléfono ${formData.phone}.`
     window.open(
       `https://wa.me/573235944931?text=${encodeURIComponent(whatsappMessage)}`,
       "_blank"
@@ -29,14 +39,13 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold tracking-wide uppercase">
-            Contacto
+            {t.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground">
-            Agenda tu <span className="text-primary">valoración</span>
+            {t.title} <span className="text-primary">{t.titleHighlight}</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Estamos listos para ayudarte a recuperar tu sonrisa. 
-            Contáctanos hoy y da el primer paso hacia una nueva vida.
+            {t.subtitle}
           </p>
         </div>
 
@@ -45,12 +54,12 @@ export function Contact() {
           <Card className="border-border shadow-lg">
             <CardContent className="p-6 sm:p-8">
               <h3 className="text-xl font-semibold text-foreground mb-6">
-                Envíanos un mensaje
+                {t.formTitle}
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
-                    placeholder="Tu nombre completo"
+                    placeholder={t.namePlaceholder}
                     value={formData.name}
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
@@ -62,7 +71,7 @@ export function Contact() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <Input
                     type="email"
-                    placeholder="Correo electrónico"
+                    placeholder={t.emailPlaceholder}
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -72,7 +81,7 @@ export function Contact() {
                   />
                   <Input
                     type="tel"
-                    placeholder="Número de celular"
+                    placeholder={t.phonePlaceholder}
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
@@ -83,7 +92,7 @@ export function Contact() {
                 </div>
                 <div>
                   <Textarea
-                    placeholder="Cuéntanos sobre tu caso o el tratamiento que te interesa..."
+                    placeholder={t.messagePlaceholder}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
@@ -99,7 +108,7 @@ export function Contact() {
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
-                  Enviar por WhatsApp
+                  {t.submitButton}
                 </Button>
               </form>
             </CardContent>
@@ -114,7 +123,7 @@ export function Contact() {
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Teléfono</h4>
+                    <h4 className="font-semibold text-foreground">{t.phone}</h4>
                     <a
                       href="tel:+573235944931"
                       className="text-primary hover:underline"
@@ -131,7 +140,7 @@ export function Contact() {
                     <MessageCircle className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">WhatsApp</h4>
+                    <h4 className="font-semibold text-foreground">{t.whatsapp}</h4>
                     <a
                       href="https://wa.me/573235944931"
                       target="_blank"
@@ -150,9 +159,9 @@ export function Contact() {
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Horario</h4>
+                    <h4 className="font-semibold text-foreground">{t.schedule}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Lun - Sáb: 8am - 6pm
+                      {t.scheduleTime}
                     </p>
                   </div>
                 </CardContent>
@@ -164,12 +173,12 @@ export function Contact() {
                     <Building className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Ubicación</h4>
+                    <h4 className="font-semibold text-foreground">{t.location}</h4>
                     <p className="text-sm text-muted-foreground">
-                      C.C. Cañaveralejo
+                      {t.locationDetail}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Local 27, Cali
+                      {t.locationDetail2}
                     </p>
                   </div>
                 </CardContent>
@@ -183,9 +192,9 @@ export function Contact() {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground">Dirección Completa</h4>
+                    <h4 className="font-semibold text-foreground">{t.fullAddress}</h4>
                     <p className="text-muted-foreground">
-                      Centro Comercial Cañaveralejo, Cl. 5 #61-59 Local 27, Pampa Linda, Cali, Valle del Cauca, Colombia
+                      {t.address}
                     </p>
                   </div>
                 </div>
@@ -198,7 +207,7 @@ export function Contact() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Ubicación del consultorio"
+                    title={locale === "en" ? "Office location" : "Ubicación del consultorio"}
                   />
                 </div>
               </CardContent>
