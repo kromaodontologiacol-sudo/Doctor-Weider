@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 import { CheckCircle, ArrowRight, Phone, Clock, AlertTriangle, Shield, Zap } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -26,9 +27,11 @@ export const metadata: Metadata = {
 }
 
 export default function DentalEmergencyCaliPage() {
+  const dictionary = getDictionary("en")
+
   return (
     <main className="min-h-screen bg-background">
-      <Header lang="en" />
+      <Header dictionary={dictionary} locale="en" />
       
       {/* Hero Section - Urgent Design */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-red-500/10 to-background overflow-hidden">
@@ -410,8 +413,8 @@ export default function DentalEmergencyCaliPage() {
         </div>
       </section>
 
-      <Footer lang="en" />
-      <WhatsAppButton lang="en" />
+      <Footer dictionary={dictionary} locale="en" />
+      <WhatsAppButton dictionary={dictionary} />
     </main>
   )
 }
