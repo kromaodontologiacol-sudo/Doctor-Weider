@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Instagram, Youtube } from "lucide-react"
+import type { Dictionary } from "@/lib/i18n/dictionaries"
+import type { Locale } from "@/lib/i18n/dictionaries"
 
 // TikTok icon component
 function TikTokIcon({ className }: { className?: string }) {
@@ -15,41 +17,31 @@ function TikTokIcon({ className }: { className?: string }) {
   )
 }
 
-const services = [
-  { name: "Implantes Dentales", href: "#servicios" },
-  { name: "Diseño de Sonrisa", href: "#servicios" },
-  { name: "Prótesis Dental", href: "#servicios" },
-  { name: "Ortodoncia", href: "#servicios" },
-  { name: "Rehabilitación Oral", href: "#servicios" },
-]
+interface FooterProps {
+  dictionary: Dictionary
+  locale: Locale
+}
 
-const quickLinks = [
-  { name: "Inicio", href: "#inicio" },
-  { name: "Servicios", href: "#servicios" },
-  { name: "Proceso", href: "#proceso" },
-  { name: "Testimonios", href: "#testimonios" },
-  { name: "El Doctor", href: "#doctor" },
-  { name: "Contacto", href: "#contacto" },
-]
+export function Footer({ dictionary, locale }: FooterProps) {
+  const t = dictionary.footer
+  const basePath = locale === "en" ? "/en" : ""
 
-export function Footer() {
   return (
     <footer className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block">
+            <Link href={basePath || "/"} className="inline-block">
               <span className="text-2xl font-serif font-bold text-white">
                 Doctor Weider
               </span>
               <span className="block text-xs tracking-widest text-accent uppercase mt-1">
-                Odontología y Tecnología
+                {t.tagline}
               </span>
             </Link>
             <p className="mt-4 text-white/70 text-sm leading-relaxed">
-              Especialista en implantología oral y reconstructiva. 
-              Transformando sonrisas en Cali con tecnología de punta.
+              {t.description}
             </p>
             <div className="mt-6 flex gap-4">
               <a
@@ -84,12 +76,12 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Servicios</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t.servicesTitle}</h3>
             <ul className="space-y-3">
-              {services.map((service) => (
+              {t.services.map((service) => (
                 <li key={service.name}>
                   <Link
-                    href={service.href}
+                    href={`${basePath}/${service.href}`}
                     className="text-white/70 hover:text-accent transition-colors text-sm"
                   >
                     {service.name}
@@ -102,13 +94,13 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
-              Enlaces Rápidos
+              {t.quickLinksTitle}
             </h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
+              {t.quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    href={`${basePath}/${link.href}`}
                     className="text-white/70 hover:text-accent transition-colors text-sm"
                   >
                     {link.name}
@@ -120,7 +112,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contacto</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">{t.contactTitle}</h3>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
                 <a href="tel:+573235944931" className="hover:text-accent transition-colors">
@@ -138,9 +130,11 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <span className="text-accent font-medium">Horario:</span>
+                <span className="text-accent font-medium">
+                  {locale === "en" ? "Hours:" : "Horario:"}
+                </span>
               </li>
-              <li>Lun - Sáb: 8am - 6pm</li>
+              <li>{locale === "en" ? "Mon - Sat: 8am - 6pm" : "Lun - Sáb: 8am - 6pm"}</li>
               <li className="pt-2">
                 C.C. Cañaveralejo
               </li>
@@ -153,14 +147,14 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-white/50">
-              © 2024 Doctor Weider Gutiérrez. Todos los derechos reservados.
+              {t.copyright}
             </p>
             <div className="flex gap-6 text-sm text-white/50">
               <Link href="#" className="hover:text-accent transition-colors">
-                Política de Privacidad
+                {t.privacy}
               </Link>
               <Link href="#" className="hover:text-accent transition-colors">
-                Términos de Uso
+                {t.terms}
               </Link>
             </div>
           </div>

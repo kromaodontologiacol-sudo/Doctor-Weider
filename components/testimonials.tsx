@@ -4,61 +4,32 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
-
-const testimonials = [
-  {
-    name: "Mónica",
-    treatment: "Atención General",
-    rating: 5,
-    text: "Excelente servicio y excelente atención de parte del médico Weider y del periodoncista Alejandro, llegué con un problema periodontal y gracias a Dios y a ellos todo está saliendo bien. Los recomiendo mucho.",
-    initial: "M",
-  },
-  {
-    name: "Samrey Cárdenas",
-    treatment: "Consulta General",
-    rating: 5,
-    text: "Excelente servicio, súper recomendados, me voy feliz!",
-    initial: "S",
-  },
-  {
-    name: "Carlos Alberto M.",
-    treatment: "Rehabilitación Oral",
-    rating: 5,
-    text: "Excelente profesional. Me hizo una rehabilitación completa y ahora puedo comer de todo. La tecnología que usa es de primera y el trato es muy humano. Muy agradecido.",
-    initial: "C",
-  },
-  {
-    name: "Ana Patricia G.",
-    treatment: "Diseño de Sonrisa",
-    rating: 5,
-    text: "Mi diseño de sonrisa quedó espectacular. El Doctor Weider se tomó el tiempo de mostrarme cómo quedaría antes de empezar. El resultado superó mis expectativas.",
-    initial: "A",
-  },
-]
+import type { Dictionary } from "@/lib/i18n/dictionaries"
 
 const beforeAfterImages = [
   {
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2415%20%281%29.PNG-9ntEn8M3I0TiX9rW9HFFG748TjueqG.png",
-    treatment: "Diseño de Sonrisa Completo",
-    description: "Transformación total con carillas de porcelana",
   },
   {
     before: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2965.JPG-G5YpDxyreX0kecmisUbzigqTkRLWN4.jpeg",
     after: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2993.JPG-WO713zMc9atFAEDO1oyLAHgpUhrb9Z.jpeg",
-    treatment: "Rehabilitación sobre Implantes",
-    description: "De implantes a sonrisa completa",
   },
 ]
 
-export function Testimonials() {
+interface TestimonialsProps {
+  dictionary: Dictionary
+}
+
+export function Testimonials({ dictionary }: TestimonialsProps) {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const t = dictionary.testimonials
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+    setCurrentTestimonial((prev) => (prev + 1) % t.items.length)
   }
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+    setCurrentTestimonial((prev) => (prev - 1 + t.items.length) % t.items.length)
   }
 
   return (
@@ -66,14 +37,13 @@ export function Testimonials() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="inline-block mb-4 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold tracking-wide uppercase">
-            Casos Reales
+            {t.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-foreground">
-            Lo que dicen nuestros <span className="text-primary">pacientes</span>
+            {t.title} <span className="text-primary">{t.titleHighlight}</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Historias reales de transformación y confianza recuperada. 
-            Tu sonrisa puede ser la próxima.
+            {t.subtitle}
           </p>
         </div>
 
@@ -90,8 +60,8 @@ export function Testimonials() {
             </div>
             <div className="w-px h-12 bg-border" />
             <div>
-              <p className="font-semibold text-foreground">Google Reviews</p>
-              <p className="text-sm text-muted-foreground">22 opiniones verificadas</p>
+              <p className="font-semibold text-foreground">{t.googleReviews}</p>
+              <p className="text-sm text-muted-foreground">{t.verifiedReviews}</p>
             </div>
           </div>
         </div>
@@ -102,21 +72,21 @@ export function Testimonials() {
             <CardContent className="p-8 sm:p-12">
               <Quote className="w-12 h-12 text-accent/30 mb-6" />
               <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-8">
-                {testimonials[currentTestimonial].text}
+                {t.items[currentTestimonial].text}
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-xl font-bold">
-                  {testimonials[currentTestimonial].initial}
+                  {t.items[currentTestimonial].initial}
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">
-                    {testimonials[currentTestimonial].name}
+                    {t.items[currentTestimonial].name}
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    {testimonials[currentTestimonial].treatment}
+                    {t.items[currentTestimonial].treatment}
                   </p>
                   <div className="flex gap-0.5 mt-1">
-                    {Array.from({ length: testimonials[currentTestimonial].rating }).map(
+                    {Array.from({ length: t.items[currentTestimonial].rating }).map(
                       (_, i) => (
                         <Star
                           key={i}
@@ -140,7 +110,7 @@ export function Testimonials() {
               <ChevronLeft className="h-5 w-5" />
             </Button>
             <div className="flex items-center gap-2">
-              {testimonials.map((_, index) => (
+              {t.items.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
@@ -166,7 +136,7 @@ export function Testimonials() {
         {/* Before/After Gallery */}
         <div className="mt-16">
           <h3 className="text-2xl font-serif font-bold text-foreground text-center mb-8">
-            Antes y Después
+            {t.beforeAfter}
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Combined before/after image */}
@@ -174,13 +144,13 @@ export function Testimonials() {
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
                   src={beforeAfterImages[0].image}
-                  alt={`${beforeAfterImages[0].treatment}`}
+                  alt={t.beforeAfterImages[0].treatment}
                   className="w-full h-auto object-cover"
                 />
               </div>
               <div className="mt-4 text-center">
-                <p className="font-semibold text-foreground">{beforeAfterImages[0].treatment}</p>
-                <p className="text-sm text-muted-foreground">{beforeAfterImages[0].description}</p>
+                <p className="font-semibold text-foreground">{t.beforeAfterImages[0].treatment}</p>
+                <p className="text-sm text-muted-foreground">{t.beforeAfterImages[0].description}</p>
               </div>
             </div>
             
@@ -190,27 +160,27 @@ export function Testimonials() {
                 <div className="relative">
                   <img
                     src={beforeAfterImages[1].before}
-                    alt="Antes"
+                    alt={t.before}
                     className="w-full h-48 sm:h-64 object-cover"
                   />
                   <span className="absolute bottom-2 left-2 px-3 py-1 bg-foreground/80 text-background text-sm rounded-full font-medium">
-                    Antes
+                    {t.before}
                   </span>
                 </div>
                 <div className="relative">
                   <img
                     src={beforeAfterImages[1].after}
-                    alt="Después"
+                    alt={t.after}
                     className="w-full h-48 sm:h-64 object-cover"
                   />
                   <span className="absolute bottom-2 right-2 px-3 py-1 bg-accent text-accent-foreground text-sm rounded-full font-medium">
-                    Después
+                    {t.after}
                   </span>
                 </div>
               </div>
               <div className="mt-4 text-center">
-                <p className="font-semibold text-foreground">{beforeAfterImages[1].treatment}</p>
-                <p className="text-sm text-muted-foreground">{beforeAfterImages[1].description}</p>
+                <p className="font-semibold text-foreground">{t.beforeAfterImages[1].treatment}</p>
+                <p className="text-sm text-muted-foreground">{t.beforeAfterImages[1].description}</p>
               </div>
             </div>
           </div>
