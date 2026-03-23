@@ -24,6 +24,7 @@ export function Header({ dictionary, locale }: HeaderProps) {
     { href: `${basePath}/dental-implants-cali`, label: "Dental Implants" },
     { href: `${basePath}/dental-implants-price-cali`, label: "Implant Prices" },
     { href: `${basePath}/dental-prosthesis-cali`, label: "Dental Prosthesis" },
+    { href: "/protesis-domicilio", label: "Home Prosthesis" },
     { href: `${basePath}/smile-design-cali`, label: "Smile Design" },
     { href: `${basePath}/dental-emergency-cali`, label: "Dental Emergency" },
     { href: `${basePath}/dental-tourism-colombia`, label: "Dental Tourism" },
@@ -31,6 +32,7 @@ export function Header({ dictionary, locale }: HeaderProps) {
     { href: "/implantes-dentales-cali", label: "Implantes Dentales" },
     { href: "/precio-implante-dental-cali", label: "Precios Implantes" },
     { href: "/protesis-dental-cali", label: "Prótesis Dental" },
+    { href: "/protesis-domicilio", label: "Prótesis a Domicilio" },
     { href: "/diseno-de-sonrisa-cali", label: "Diseño de Sonrisa" },
     { href: "/urgencias-odontologicas-cali", label: "Urgencias" },
   ]

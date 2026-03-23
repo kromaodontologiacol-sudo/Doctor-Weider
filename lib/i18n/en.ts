@@ -300,6 +300,7 @@ export const en: Dictionary = {
       { name: "Implant Prices", href: "dental-implants-price-cali" },
       { name: "Smile Design", href: "smile-design-cali" },
       { name: "Dental Prosthetics", href: "dental-prosthesis-cali" },
+      { name: "Home Prosthesis", href: "protesis-domicilio" },
       { name: "Dental Emergency", href: "dental-emergency-cali" },
     ],
     quickLinks: [

@@ -297,6 +297,7 @@ export const es = {
       { name: "Precio Implantes", href: "precio-implante-dental-cali" },
       { name: "Diseño de Sonrisa", href: "diseno-de-sonrisa-cali" },
       { name: "Prótesis Dental", href: "protesis-dental-cali" },
+      { name: "Prótesis a Domicilio", href: "protesis-domicilio" },
       { name: "Urgencias Odontológicas", href: "urgencias-odontologicas-cali" },
     ],
     quickLinks: [
