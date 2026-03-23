@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 
 const navItems = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#proceso", label: "Proceso" },
-  { href: "#testimonios", label: "Testimonios" },
-  { href: "#doctor", label: "El Doctor" },
+  { href: "/", label: "Inicio" },
+  { href: "/implantes-dentales-cali", label: "Implantes" },
+  { href: "/protesis-dental-cali", label: "Prótesis" },
+  { href: "/urgencias-odontologicas-cali", label: "Urgencias" },
+  { href: "/diseno-de-sonrisa-cali", label: "Diseño de Sonrisa" },
+  { href: "/blog", label: "Blog" },
   { href: "#contacto", label: "Contacto" },
 ]
 

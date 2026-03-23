@@ -32,13 +32,13 @@ export function HeroEN() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-tight">
-              Dental Implants in{" "}
-              <span className="text-accent">Cali, Colombia</span>
+              Dental Implants in Cali{" "}
+              <span className="text-accent">with Dr. Weider</span>
             </h1>
             
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">
-              Restore your smile with safe, aesthetic, and long-lasting dental implants. 
-              High-quality care at affordable prices compared to US costs.
+              Specialist in dental implants, dental prosthesis, smile design and oral rehabilitation in Cali, Colombia. 
+              Restore your smile with state-of-the-art technology. Save 60-70% compared to US prices.
             </p>
 
             {/* International Focus */}

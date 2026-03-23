@@ -32,13 +32,13 @@ export function Hero() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-tight">
-              Tu sonrisa en las{" "}
-              <span className="text-accent">mejores manos</span>
+              Implantes Dentales en Cali{" "}
+              <span className="text-accent">con el Dr Weider</span>
             </h1>
             
             <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">
-              Odontología con tecnología de punta. Implantes, diseño de sonrisa, 
-              prótesis, ortodoncia y rehabilitación oral en Cali.
+              Especialista en implantes dentales, prótesis dental, diseño de sonrisa y rehabilitación oral en Cali. 
+              Recupera tu sonrisa con tecnología de punta y atención personalizada.
             </p>
             
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 lg:justify-start justify-center">
