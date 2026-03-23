@@ -15,16 +15,20 @@ export const es = {
     schedule: "Agendar Cita",
   },
   hero: {
-    badge: "Pacientes en Cali ya recuperaron su sonrisa",
+    badge: "Pacientes en Cali ya recuperaron su sonrisa con nosotros",
     title: "Implantes dentales en Cali con el",
     titleHighlight: "Dr. Weider",
-    subtitle: "Recupera tu sonrisa con confianza y vuelve a disfrutar sin molestias. Valoración personalizada, procedimiento seguro y resultados naturales.",
+    subtitle: "Recupera tu sonrisa fija y vuelve a comer con confianza",
     cta: "Agendar valoración por WhatsApp",
+    ctaSecondary: "Hablar con el especialista ahora",
     features: [
       "Valoración personalizada",
-      "Procedimiento seguro",
-      "Resultados naturales"
+      "Procedimiento seguro y predecible",
+      "Resultados naturales y duraderos"
     ],
+    price: "Desde $1.500.000 COP",
+    priceUsd: "(aprox. 380 USD, precios actualizados 2026)",
+    urgency: "Agenda hoy tu valoración y recibe tu plan de tratamiento personalizado",
     stats: {
       patients: { value: "+2000", label: "Pacientes felices" },
       rating: { value: "5.0", label: "Calificación Google" },
@@ -302,8 +306,8 @@ export const es = {
     ],
   },
   whatsapp: {
-    message: "Hola, quiero información sobre implantes en Cali",
-    scheduleMessage: "Hola, quiero agendar una valoración",
+    message: "Hola, quiero información sobre implantes dentales en Cali y agendar una valoración",
+    scheduleMessage: "Hola, quiero información sobre implantes dentales en Cali y agendar una valoración",
     helpText: "¿Necesitas ayuda?",
     serviceMessage: "Hola, me interesa el servicio de",
     startProcess: "Hola, quiero iniciar mi valoración",

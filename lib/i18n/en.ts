@@ -17,16 +17,20 @@ export const en: Dictionary = {
     schedule: "Book Appointment",
   },
   hero: {
-    badge: "Save up to 70% compared to US prices",
+    badge: "Patients worldwide already recovered their smile with us",
     title: "Dental Implants in",
     titleHighlight: "Cali, Colombia",
-    subtitle: "Starting from $380 USD (updated 2026). World-class dental care at a fraction of US prices. Board-certified specialists with 15+ years of experience.",
-    cta: "Get your personalized treatment plan now",
+    subtitle: "Get your fixed smile back and eat with confidence again",
+    cta: "Schedule consultation via WhatsApp",
+    ctaSecondary: "Talk to the specialist now",
     features: [
-      "Starting from $380 USD",
-      "Save up to 70% vs US",
-      "Free consultation"
+      "Personalized assessment",
+      "Safe and predictable procedure",
+      "Natural and lasting results"
     ],
+    price: "From $380 USD",
+    priceUsd: "(approx. $1,500,000 COP, 2026 updated prices)",
+    urgency: "Schedule your consultation today and receive your personalized treatment plan",
     priceComparison: {
       us: "$3,000 - $5,000 USD",
       colombia: "From $380 USD"

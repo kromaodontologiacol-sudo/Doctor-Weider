@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { MessageCircle, ChevronDown, Star } from "lucide-react"
+import { MessageCircle, ChevronDown, Star, CheckCircle, Phone } from "lucide-react"
 import type { Dictionary } from "@/lib/i18n/dictionaries"
 
 interface HeroProps {
@@ -30,6 +30,7 @@ export function Hero({ dictionary }: HeroProps) {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
+            {/* Social Proof Badge */}
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
@@ -39,33 +40,83 @@ export function Hero({ dictionary }: HeroProps) {
               <span className="text-white/90 text-sm font-medium">{t.badge}</span>
             </div>
             
+            {/* H1 Principal */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-tight">
               {t.title}{" "}
               <span className="text-accent">{t.titleHighlight}</span>
             </h1>
             
-            <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-xl leading-relaxed">
+            {/* Subheadline */}
+            <p className="mt-6 text-xl sm:text-2xl text-white/90 max-w-xl leading-relaxed font-medium">
               {t.subtitle}
             </p>
             
-            <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 lg:justify-start justify-center">
+            {/* Features con checkmarks - MUY VISIBLE */}
+            {t.features && (
+              <div className="mt-6 flex flex-col gap-2">
+                {t.features.map((feature, idx) => (
+                  <div key={idx} className="flex items-center gap-3 text-white">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                    <span className="text-lg">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            {/* Precio visible */}
+            {t.price && (
+              <div className="mt-6 p-4 bg-accent/20 border border-accent/30 rounded-xl inline-block">
+                <p className="text-2xl sm:text-3xl font-bold text-accent">{t.price}</p>
+                <p className="text-white/80 text-sm">{t.priceUsd}</p>
+              </div>
+            )}
+            
+            {/* Urgencia */}
+            {t.urgency && (
+              <p className="mt-4 text-accent font-semibold text-lg animate-pulse">
+                {t.urgency}
+              </p>
+            )}
+            
+            {/* CTAs - Principal y Secundario */}
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 lg:justify-start justify-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-10 py-7 font-semibold shadow-xl text-lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-7 font-semibold shadow-xl text-lg w-full sm:w-auto"
               >
                 <a
                   href={`https://wa.me/573235944931?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3"
+                  className="flex items-center justify-center gap-3"
                 >
                   <MessageCircle className="h-6 w-6" />
                   {t.cta}
                 </a>
               </Button>
+              
+              {t.ctaSecondary && (
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-white/30 bg-white/10 hover:bg-white/20 text-white text-base px-8 py-7 font-semibold text-lg w-full sm:w-auto"
+                >
+                  <a
+                    href={`https://wa.me/573235944931?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3"
+                  >
+                    <Phone className="h-6 w-6" />
+                    {t.ctaSecondary}
+                  </a>
+                </Button>
+              )}
             </div>
             
+            {/* Stats */}
             <div className="mt-12 flex items-center gap-6 text-white/80 lg:justify-start justify-center flex-wrap">
               <div className="text-center">
                 <p className="text-3xl font-bold text-white">{t.stats.patients.value}</p>
