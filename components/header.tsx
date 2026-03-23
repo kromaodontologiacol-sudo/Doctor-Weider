@@ -1,0 +1,140 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Menu, X, Phone } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+const navItems = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#proceso", label: "Proceso" },
+  { href: "#testimonios", label: "Testimonios" },
+  { href: "#doctor", label: "El Doctor" },
+  { href: "#contacto", label: "Contacto" },
+]
+
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  return (
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-background/98 backdrop-blur-md shadow-sm border-b border-border" 
+          : "bg-transparent"
+      }`}
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between lg:h-20">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex flex-col">
+              <span className={`text-xl font-serif font-bold tracking-tight ${isScrolled ? "text-foreground" : "text-white"}`}>
+                Doctor Weider
+              </span>
+              <span className={`text-[10px] tracking-wider uppercase ${isScrolled ? "text-accent" : "text-accent"}`}>
+                Clínica Odontológica
+              </span>
+            </div>
+          </Link>
+
+          <nav className="hidden lg:flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled 
+                    ? "text-muted-foreground hover:text-primary" 
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="tel:+573235944931"
+              className={`flex items-center gap-2 text-sm font-medium ${
+                isScrolled ? "text-primary" : "text-white"
+              }`}
+            >
+              <Phone className="h-4 w-4" />
+              323 594 4931
+            </a>
+            <Button 
+              asChild 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+            >
+              <a
+                href="https://wa.me/573235944931?text=Hola,%20quiero%20agendar%20una%20cita"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Agendar Cita
+              </a>
+            </Button>
+          </div>
+
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className={`h-6 w-6 ${isScrolled ? "text-foreground" : "text-white"}`} />
+            ) : (
+              <Menu className={`h-6 w-6 ${isScrolled ? "text-foreground" : "text-white"}`} />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {isMenuOpen && (
+        <div className="lg:hidden border-t border-border bg-background">
+          <nav className="flex flex-col px-4 py-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="py-3 text-base font-medium text-muted-foreground hover:text-primary transition-colors border-b border-border last:border-0"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="mt-4 flex flex-col gap-3">
+              <a
+                href="tel:+573235944931"
+                className="flex items-center justify-center gap-2 text-base font-medium text-primary"
+              >
+                <Phone className="h-5 w-5" />
+                323 594 4931
+              </a>
+              <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                <a
+                  href="https://wa.me/573235944931?text=Hola,%20quiero%20agendar%20una%20cita"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar Cita
+                </a>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
+  )
+}
