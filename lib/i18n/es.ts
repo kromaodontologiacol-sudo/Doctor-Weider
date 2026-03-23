@@ -15,11 +15,16 @@ export const es = {
     schedule: "Agendar Cita",
   },
   hero: {
-    badge: "5.0 en Google",
-    title: "Tu sonrisa en las",
-    titleHighlight: "mejores manos",
-    subtitle: "Odontología con tecnología de punta. Implantes, diseño de sonrisa, prótesis, ortodoncia y rehabilitación oral en Cali.",
-    cta: "Agendar cita por WhatsApp",
+    badge: "Pacientes en Cali ya recuperaron su sonrisa",
+    title: "Implantes dentales en Cali con el",
+    titleHighlight: "Dr. Weider",
+    subtitle: "Recupera tu sonrisa con confianza y vuelve a disfrutar sin molestias. Valoración personalizada, procedimiento seguro y resultados naturales.",
+    cta: "Agendar valoración por WhatsApp",
+    features: [
+      "Valoración personalizada",
+      "Procedimiento seguro",
+      "Resultados naturales"
+    ],
     stats: {
       patients: { value: "+2000", label: "Pacientes felices" },
       rating: { value: "5.0", label: "Calificación Google" },
@@ -297,8 +302,8 @@ export const es = {
     ],
   },
   whatsapp: {
-    message: "Hola, quiero información sobre los servicios",
-    scheduleMessage: "Hola, quiero agendar una cita",
+    message: "Hola, quiero información sobre implantes en Cali",
+    scheduleMessage: "Hola, quiero agendar una valoración",
     helpText: "¿Necesitas ayuda?",
     serviceMessage: "Hola, me interesa el servicio de",
     startProcess: "Hola, quiero iniciar mi valoración",

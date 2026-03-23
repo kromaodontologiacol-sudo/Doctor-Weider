@@ -17,11 +17,20 @@ export const en: Dictionary = {
     schedule: "Book Appointment",
   },
   hero: {
-    badge: "5.0 on Google",
-    title: "Your smile in the",
-    titleHighlight: "best hands",
-    subtitle: "State-of-the-art dentistry. Implants, smile design, prosthetics, orthodontics, and oral rehabilitation in Cali, Colombia.",
-    cta: "Book via WhatsApp",
+    badge: "Save up to 70% compared to US prices",
+    title: "Dental Implants in",
+    titleHighlight: "Cali, Colombia",
+    subtitle: "Starting from $380 USD (updated 2026). World-class dental care at a fraction of US prices. Board-certified specialists with 15+ years of experience.",
+    cta: "Get your personalized treatment plan now",
+    features: [
+      "Starting from $380 USD",
+      "Save up to 70% vs US",
+      "Free consultation"
+    ],
+    priceComparison: {
+      us: "$3,000 - $5,000 USD",
+      colombia: "From $380 USD"
+    },
     stats: {
       patients: { value: "+2000", label: "Happy patients" },
       rating: { value: "5.0", label: "Google rating" },
@@ -299,8 +308,8 @@ export const en: Dictionary = {
     ],
   },
   whatsapp: {
-    message: "Hi, I would like information about your services",
-    scheduleMessage: "Hi, I would like to schedule an appointment",
+    message: "Hi, I want information about dental implants in Cali",
+    scheduleMessage: "Hi, I would like to schedule a consultation",
     helpText: "Need help?",
     serviceMessage: "Hi, I'm interested in",
     startProcess: "Hi, I would like to start my evaluation",
