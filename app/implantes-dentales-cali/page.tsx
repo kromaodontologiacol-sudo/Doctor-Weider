@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User } from "lucide-react"
+import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Implantes Dentales en Cali | Precio y Especialista | Dr Weider",
@@ -383,11 +384,14 @@ export default function ImplantesDentalesCali() {
                 un presupuesto personalizado sin compromiso.
               </p>
               <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/20">
-                <p className="text-lg font-semibold text-foreground">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Implante dental desde $1.500.000 COP (aprox. $380 USD)
+                </p>
+                <p className="text-muted-foreground">
                   Ofrecemos opciones de pago flexibles para que puedas acceder a tu tratamiento
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-10">
                   <a
                     href="https://wa.me/573235944931?text=Hola,%20quiero%20conocer%20el%20precio%20de%20implantes%20dentales%20en%20Cali"
@@ -398,6 +402,12 @@ export default function ImplantesDentalesCali() {
                     <MessageCircle className="h-5 w-5" />
                     Consultar precio por WhatsApp
                   </a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="font-semibold">
+                  <Link href="/precio-implante-dental-cali" className="flex items-center gap-2">
+                    Ver precios detallados
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
                 </Button>
               </div>
             </div>

@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { HeaderEN } from "@/components/en/header"
 import { FooterEN } from "@/components/en/footer"
 import { WhatsAppButtonEN } from "@/components/en/whatsapp-button"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, DollarSign } from "lucide-react"
+import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, DollarSign, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Dental Implants in Cali, Colombia | Save 60-70% | Dr Weider",
@@ -384,11 +385,14 @@ export default function DentalImplantsCali() {
                 a personalized quote with no obligation.
               </p>
               <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/20">
-                <p className="text-lg font-semibold text-foreground">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Dental implant from $380 USD (vs $1,500-$3,000 in the US)
+                </p>
+                <p className="text-muted-foreground">
                   Save 60-70% compared to US prices with the same quality materials
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-10">
                   <a
                     href="https://wa.me/573235944931?text=Hi,%20I%20want%20to%20know%20the%20price%20of%20dental%20implants%20in%20Cali"
@@ -399,6 +403,12 @@ export default function DentalImplantsCali() {
                     <MessageCircle className="h-5 w-5" />
                     Get a free quote via WhatsApp
                   </a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="font-semibold">
+                  <Link href="/en/dental-implants-price-cali" className="flex items-center gap-2">
+                    View detailed pricing
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
                 </Button>
               </div>
             </div>
