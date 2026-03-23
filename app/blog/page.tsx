@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { getDictionary } from "@/lib/i18n/dictionaries"
-import { Calendar, Clock, ArrowRight, User } from "lucide-react"
+import { Calendar, Clock, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Blog Odontológico | Dr. Weider - Implantes Dentales Cali",
