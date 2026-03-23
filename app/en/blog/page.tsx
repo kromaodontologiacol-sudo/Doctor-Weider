@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { Calendar, Clock, ArrowRight, User } from "lucide-react"
+import { getDictionary } from "@/lib/i18n/dictionaries"
 
 export const metadata: Metadata = {
   title: "Dental Blog | Dr. Weider - Dental Implants & Cosmetic Dentistry Cali",
@@ -74,9 +75,11 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
+  const dictionary = getDictionary("en")
+  
   return (
     <main className="min-h-screen bg-background">
-      <Header lang="en" />
+      <Header dictionary={dictionary} locale="en" />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-primary/5 to-background">
@@ -251,8 +254,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer lang="en" />
-      <WhatsAppButton lang="en" />
+      <Footer dictionary={dictionary} locale="en" />
+      <WhatsAppButton dictionary={dictionary} />
     </main>
   )
 }
