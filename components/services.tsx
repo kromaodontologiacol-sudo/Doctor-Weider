@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -97,7 +98,14 @@ export function Services({ dictionary }: ServicesProps) {
                         {service.fullDesc}
                       </DialogDescription>
                     </DialogHeader>
-                    <div className="mt-4">
+                    <div className="mt-4 flex flex-col gap-2">
+                      {service.href && (
+                        <Button asChild variant="outline" className="w-full font-semibold">
+                          <Link href={service.href}>
+                            {t.viewMore}
+                          </Link>
+                        </Button>
+                      )}
                       <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                         <a
                           href={`https://wa.me/573235944931?text=${encodeURIComponent(`${whatsappServiceMessage} ${service.title}`)}`}

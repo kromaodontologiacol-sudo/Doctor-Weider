@@ -14,8 +14,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Implantes Dentales en Cali - Dr. Weider Gutiérrez | Odontología Especializada',
-  description: 'Implantes dentales desde $1.500.000 COP en Cali. Especialista en implantología oral. Diseño de sonrisa, prótesis y rehabilitación oral. Agenda tu valoración gratis.',
+  title: 'Implantes Dentales en Cali | Dr Weider Implantología Oral',
+  description: 'Recupera tu sonrisa con implantes dentales en Cali. Agenda tu valoración con el Dr Weider. Desde $1.500.000 COP. Especialista en implantología oral.',
   keywords: 'implantes dentales cali, odontólogo cali, diseño de sonrisa cali, prótesis dental cali, implantología cali, doctor weider',
   alternates: {
     canonical: 'https://doctorweider.com',
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Implantes Dentales en Cali - Dr. Weider Gutiérrez',
-    description: 'Implantes dentales desde $1.500.000 COP. Especialista en implantología oral. Tu sonrisa en las mejores manos.',
+    title: 'Implantes Dentales en Cali | Dr Weider Implantología Oral',
+    description: 'Recupera tu sonrisa con implantes dentales en Cali. Agenda tu valoración con el Dr Weider. Especialista en implantología oral.',
     locale: 'es_CO',
     alternateLocale: 'en_US',
     type: 'website',
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Implantes Dentales en Cali - Dr. Weider',
-    description: 'Implantes dentales desde $1.500.000 COP. Especialista en implantología oral.',
+    title: 'Implantes Dentales en Cali | Dr Weider Implantología Oral',
+    description: 'Recupera tu sonrisa con implantes dentales en Cali. Agenda tu valoración con el Dr Weider.',
   },
   robots: {
     index: true,
