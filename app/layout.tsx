@@ -14,12 +14,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Doctor Weider | Odontología Integral en Cali | Implantes, Diseño de Sonrisa y más',
-  description: 'Odontólogo especialista en Cali. Implantes dentales, diseño de sonrisa, prótesis, ortodoncia, rehabilitación oral y más. Tecnología digital y atención personalizada.',
-  keywords: 'odontólogo cali, implantes dentales cali, diseño de sonrisa cali, prótesis dental, ortodoncia cali, rehabilitación oral, doctor weider',
+  title: 'Implantes Dentales en Cali | Dr Weider Implantología Oral',
+  description: 'Recupera tu sonrisa con implantes dentales en Cali. Especialista en implantología, prótesis dental, urgencias odontológicas y diseño de sonrisa. Agenda tu valoración con el Dr Weider.',
+  keywords: 'implantes dentales cali, precio implante dental cali, odontólogo cali, prótesis dental cali, urgencias odontológicas cali, diseño de sonrisa cali, rehabilitación oral cali, doctor weider, especialista en implantes cali',
   openGraph: {
-    title: 'Doctor Weider | Odontología Integral en Cali',
-    description: 'Tu sonrisa en las mejores manos. Implantes, diseño de sonrisa, prótesis, ortodoncia y rehabilitación oral con tecnología de punta.',
+    title: 'Implantes Dentales en Cali | Dr Weider Implantología Oral',
+    description: 'Recupera tu sonrisa con implantes dentales en Cali. Agenda tu valoración con el Dr Weider, especialista en implantología oral.',
     locale: 'es_CO',
     type: 'website',
   },

@@ -4,13 +4,15 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 const navItems = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#proceso", label: "Proceso" },
-  { href: "#testimonios", label: "Testimonios" },
-  { href: "#doctor", label: "El Doctor" },
+  { href: "/", label: "Inicio" },
+  { href: "/implantes-dentales-cali", label: "Implantes" },
+  { href: "/protesis-dental-cali", label: "Prótesis" },
+  { href: "/urgencias-odontologicas-cali", label: "Urgencias" },
+  { href: "/diseno-de-sonrisa-cali", label: "Diseño de Sonrisa" },
+  { href: "/blog", label: "Blog" },
   { href: "#contacto", label: "Contacto" },
 ]
 
@@ -64,6 +66,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
+            <LanguageSwitcher isScrolled={isScrolled} />
             <a
               href="tel:+573235944931"
               className={`flex items-center gap-2 text-sm font-medium ${
@@ -115,6 +118,7 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-3">
+              <LanguageSwitcher isScrolled={true} />
               <a
                 href="tel:+573235944931"
                 className="flex items-center justify-center gap-2 text-base font-medium text-primary"
