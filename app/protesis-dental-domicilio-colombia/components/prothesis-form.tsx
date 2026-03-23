@@ -8,7 +8,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertCircle } from "lucide-react"
 
-const WOMPI_CHECKOUT_URL = "https://checkout.wompi.co/l/TU_LINK"
+const WOMPI_CHECKOUT_URL = "https://checkout.wompi.co/l/eDSHsY"
 
 export function ProthesisForm() {
   const [formData, setFormData] = useState({
