@@ -66,6 +66,12 @@ export const es = {
         href: "/protesis-dental-cali",
       },
       {
+        title: "Prótesis a Domicilio Colombia",
+        shortDesc: "Recibe tu prótesis dental personalizada en cualquier parte de Colombia.",
+        fullDesc: "Servicio exclusivo de prótesis dental a domicilio para toda Colombia. Recibes un kit de impresión, lo devuelves y en 7 días hábiles tu prótesis personalizada llega a tu puerta. Ideal si no puedes viajar a Cali o prefieres la comodidad de tu hogar. Desde $580.000 COP todo incluido.",
+        href: "/protesis-dental-domicilio-colombia",
+      },
+      {
         title: "Prótesis de Alta Succión",
         shortDesc: "Dentaduras flexibles con retención superior sin adhesivos.",
         fullDesc: "Las prótesis de alta succión son dentaduras diseñadas con técnicas especiales que proporcionan una retención excepcional sin necesidad de adhesivos. Fabricadas con materiales flexibles de alta calidad, son ideales para pacientes que buscan comodidad y seguridad al hablar y comer.",
