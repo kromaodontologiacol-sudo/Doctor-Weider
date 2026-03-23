@@ -31,6 +31,7 @@ export function Header({ dictionary, locale }: HeaderProps) {
     { href: "/implantes-dentales-cali", label: "Implantes Dentales" },
     { href: "/precio-implante-dental-cali", label: "Precios Implantes" },
     { href: "/protesis-dental-cali", label: "Prótesis Dental" },
+    { href: "/protesis-dental-domicilio-colombia", label: "Prótesis a Domicilio" },
     { href: "/diseno-de-sonrisa-cali", label: "Diseño de Sonrisa" },
     { href: "/urgencias-odontologicas-cali", label: "Urgencias" },
   ]
