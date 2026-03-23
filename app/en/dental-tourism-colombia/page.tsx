@@ -66,7 +66,7 @@ const whyCaliReasons = [
 const services = [
   {
     title: "Dental Implants",
-    description: "Single implants from $380 USD. Full arch solutions available.",
+    description: "Single implants from $380 USD (approximate price, updated for 2026). Full arch solutions available.",
     link: "/en/dental-implants-cali",
     savings: "Save $2,000-$4,000 per implant"
   },
@@ -159,10 +159,10 @@ export default function DentalTourismColombia() {
                 Dental Tourism
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Dental Tourism in Colombia - High Quality Care at Affordable Prices
+                Dental Tourism in Colombia (2026)
               </h1>
               <p className="mt-6 text-xl text-white/90 leading-relaxed">
-                Travel to Cali and restore your smile while saving thousands of dollars
+                Restore your smile while saving thousands of dollars
               </p>
               
               {/* Key stats */}
@@ -373,11 +373,11 @@ export default function DentalTourismColombia() {
                         <span className="text-2xl font-bold text-accent-foreground">VS</span>
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary mb-2">Cali, Colombia</h3>
-                      <p className="text-4xl font-bold text-primary">$760 - $1,000</p>
-                      <p className="text-sm text-muted-foreground mt-1">Per implant with crown</p>
-                    </div>
+<div>
+                                      <h3 className="text-lg font-semibold text-primary mb-2">Cali, Colombia</h3>
+                                      <p className="text-4xl font-bold text-primary">from $380 USD</p>
+                                      <p className="text-sm text-muted-foreground mt-1">*Approximate price, updated for 2026</p>
+                                    </div>
                   </div>
                   <div className="mt-8 p-4 bg-primary/5 rounded-xl text-center">
                     <p className="text-2xl font-bold text-primary">

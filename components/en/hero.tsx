@@ -28,7 +28,7 @@ export function HeroEN() {
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <span className="text-white/90 text-sm font-medium">Trusted by patients in Cali and international visitors</span>
+              <span className="text-white/90 text-sm font-medium">Trusted by local and international patients</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-white leading-tight">
@@ -37,22 +37,38 @@ export function HeroEN() {
             </h1>
             
             <p className="mt-6 text-xl sm:text-2xl text-white/90 max-w-xl leading-relaxed font-medium">
-              High-quality dental care at up to 70% lower cost than in the US
+              Save up to 70% on dental implants compared to the US
             </p>
 
+            {/* Price comparison - highly visible */}
+            <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl max-w-lg lg:mx-0 mx-auto">
+              <div className="flex items-center justify-between gap-4 text-center">
+                <div>
+                  <p className="text-sm text-white/70">In the US</p>
+                  <p className="text-xl font-bold text-white/60 line-through">$3,000 - $5,000</p>
+                </div>
+                <div className="text-accent font-bold text-xl">vs</div>
+                <div>
+                  <p className="text-sm text-white/70">In Cali, Colombia</p>
+                  <p className="text-xl font-bold text-accent">from $380 USD</p>
+                </div>
+              </div>
+              <p className="text-xs text-white/60 text-center mt-2">*Approximate price, updated for 2026</p>
+            </div>
+
             {/* Highly visible bullets */}
-            <ul className="mt-8 space-y-3 max-w-lg lg:mx-0 mx-auto">
+            <ul className="mt-6 space-y-3 max-w-lg lg:mx-0 mx-auto">
               <li className="flex items-center gap-3 text-white">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
-                <span className="text-lg">Experienced implant specialist</span>
+                <span className="text-lg">Starting from $380 USD (approximate price, updated for 2026)</span>
               </li>
               <li className="flex items-center gap-3 text-white">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
-                <span className="text-lg">Modern techniques and materials</span>
+                <span className="text-lg">High-quality materials and techniques</span>
               </li>
               <li className="flex items-center gap-3 text-white">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0" />
-                <span className="text-lg">Personalized treatment in English</span>
+                <span className="text-lg">Personalized treatment plan</span>
               </li>
             </ul>
 
@@ -79,13 +95,13 @@ export function HeroEN() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-10 py-7 font-semibold shadow-xl text-lg"
               >
                 <a
-                  href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants%20in%20Cali"
+                  href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants%20in%20Cali%20and%20a%20personalized%20treatment%20plan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3"
                 >
                   <MessageCircle className="h-6 w-6" />
-                  Get your personalized treatment plan
+                  Get your personalized treatment plan now
                 </a>
               </Button>
               <Button

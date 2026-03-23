@@ -8,9 +8,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, MessageCircle, Star, Shield, Clock, Award, Zap, AlertCircle, Phone, User, DollarSign, ArrowRight, Globe, Plane, MapPin, Send, FileImage, Calendar, Heart } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Dental Implants in Cali, Colombia | Save 60-70% | Dr Weider",
-  description: "Dental implants in Cali, Colombia with Dr Weider, oral implantology specialist. Restore your smile safely. Learn about the process, benefits and pricing. Save 60-70% vs US prices.",
-  keywords: "dental implants cali, dental implants colombia, dental implant cost colombia, dental implants specialist cali, oral implantology cali, dental tourism colombia",
+  title: "Dental Implants in Cali, Colombia (2026) | From $380 USD | Dr Weider",
+  description: "Dental implants in Cali, Colombia from $380 USD (2026 prices). Save 60-70% vs US prices. Experienced specialist, high-quality materials, personalized treatment in English.",
+  keywords: "dental implants colombia cost, affordable dental implants colombia, dental tourism colombia, dentist in cali colombia, dental implants cali, oral implantology cali",
 }
 
 const testimonials = [
@@ -71,7 +71,7 @@ export default function DentalImplantsCali() {
               <div>
                 <span className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold">
                   <DollarSign className="h-4 w-4" />
-                  Save 60-70% vs US Prices
+                  Save 60-70% vs US Prices | 2026 Updated Prices
                 </span>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
                   Dental Implants in Cali with Dr Weider
@@ -535,10 +535,13 @@ export default function DentalImplantsCali() {
               </p>
               <div className="mt-8 p-6 bg-accent/10 rounded-xl border border-accent/20">
                 <p className="text-lg font-semibold text-foreground mb-2">
-                  Dental implant from $380 USD (vs $1,500-$3,000 in the US)
+                  Dental implants start from $380 USD (approximate price, updated for 2026)
                 </p>
-                <p className="text-muted-foreground">
-                  Save 60-70% compared to US prices with the same quality materials
+                <p className="text-foreground mb-2">
+                  Zirconia crowns on implants start from $380 USD (approximate price, updated for 2026)
+                </p>
+                <p className="text-sm text-muted-foreground mt-3">
+                  In the US, the same treatment can cost between $3,000-$5,000 USD
                 </p>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -601,6 +604,9 @@ export default function DentalImplantsCali() {
         {/* 9. URGENCY / STRONG CTA */}
         <section className="py-16 bg-accent">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-lg font-semibold text-accent-foreground/90 mb-2">
+              Limited availability for international patients each month
+            </p>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-accent-foreground">
               Schedule your evaluation today and receive a personalized treatment plan
             </h2>

@@ -8,9 +8,9 @@ import { CheckCircle, MessageCircle, Star, AlertTriangle, CreditCard, Shield, He
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Dental Implant Cost in Cali, Colombia 2024 | From $380 USD | Dr Weider",
-  description: "Dental implant prices in Cali, Colombia. Single implant from $380 USD. Zirconia crown from $380 USD. Save 60-70% vs US prices. Schedule your free consultation with Dr Weider, implant specialist.",
-  keywords: "dental implant cost colombia, dental implant price cali, cheap dental implants colombia, affordable dental implants cali, dental tourism colombia cost, how much are dental implants in colombia",
+  title: "Dental Implant Cost in Cali, Colombia (2026) | From $380 USD | Dr Weider",
+  description: "Dental implant prices in Cali, Colombia (2026 updated). Single implant from $380 USD. Zirconia crown from $380 USD. Save 60-70% vs US prices. Schedule your free consultation with Dr Weider.",
+  keywords: "dental implants colombia cost, dental implant price cali 2026, affordable dental implants colombia, dental tourism colombia cost, how much are dental implants in colombia",
 }
 
 const faqs = [
@@ -55,7 +55,7 @@ export default function DentalImplantsPriceCali() {
                 Save 60-70% vs US Prices
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Dental Implant Cost in Cali, Colombia
+                Dental Implants Cost in Cali, Colombia (2026)
               </h1>
               <p className="mt-6 text-xl text-white/90 leading-relaxed">
                 Discover affordable, high-quality dental implants and schedule your free consultation with Dr Weider
@@ -133,6 +133,7 @@ export default function DentalImplantsPriceCali() {
                       <p className="text-5xl font-bold text-primary">$380</p>
                       <span className="text-muted-foreground">USD</span>
                       <p className="text-lg text-accent font-semibold mt-2">~$1,500,000 COP</p>
+                      <p className="text-xs text-muted-foreground mt-1">*Approximate price, updated for 2026</p>
                     </div>
                     <ul className="text-left space-y-2 text-muted-foreground mb-6">
                       <li className="flex items-center gap-2">
@@ -164,6 +165,7 @@ export default function DentalImplantsPriceCali() {
                       <p className="text-5xl font-bold text-accent">$380</p>
                       <span className="text-muted-foreground">USD</span>
                       <p className="text-lg text-primary font-semibold mt-2">~$1,500,000 COP</p>
+                      <p className="text-xs text-muted-foreground mt-1">*Approximate price, updated for 2026</p>
                     </div>
                     <ul className="text-left space-y-2 text-muted-foreground mb-6">
                       <li className="flex items-center gap-2">
