@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import type { Dictionary } from "@/lib/i18n/dictionaries"
@@ -16,15 +16,32 @@ interface HeaderProps {
 export function Header({ dictionary, locale }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   const basePath = locale === "en" ? "/en" : ""
 
+  const servicePages = locale === "en" ? [
+    { href: `${basePath}/dental-implants-cali`, label: "Dental Implants" },
+    { href: `${basePath}/dental-implants-price-cali`, label: "Implant Prices" },
+    { href: `${basePath}/dental-prosthesis-cali`, label: "Dental Prosthesis" },
+    { href: `${basePath}/smile-design-cali`, label: "Smile Design" },
+    { href: `${basePath}/dental-emergency-cali`, label: "Dental Emergency" },
+    { href: `${basePath}/dental-tourism-colombia`, label: "Dental Tourism" },
+  ] : [
+    { href: "/implantes-dentales-cali", label: "Implantes Dentales" },
+    { href: "/precio-implante-dental-cali", label: "Precios Implantes" },
+    { href: "/protesis-dental-cali", label: "Prótesis Dental" },
+    { href: "/diseno-de-sonrisa-cali", label: "Diseño de Sonrisa" },
+    { href: "/urgencias-odontologicas-cali", label: "Urgencias" },
+  ]
+
   const navItems = [
     { href: `${basePath}/#inicio`, label: dictionary.nav.home },
-    { href: `${basePath}/#servicios`, label: dictionary.nav.services },
+    { href: "services", label: dictionary.nav.services, hasDropdown: true },
     { href: `${basePath}/#proceso`, label: dictionary.nav.process },
     { href: `${basePath}/#testimonios`, label: dictionary.nav.testimonials },
     { href: `${basePath}/#doctor`, label: dictionary.nav.doctor },
+    { href: `${basePath}/blog`, label: "Blog" },
     { href: `${basePath}/#contacto`, label: dictionary.nav.contact },
   ]
 
@@ -59,19 +76,54 @@ export function Header({ dictionary, locale }: HeaderProps) {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled 
-                    ? "text-muted-foreground hover:text-primary" 
-                    : "text-white/90 hover:text-white"
-                }`}
-              >
-                {item.label}
-              </Link>
+              item.hasDropdown ? (
+                <div 
+                  key={item.href}
+                  className="relative"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <button
+                    className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                      isScrolled 
+                        ? "text-muted-foreground hover:text-primary" 
+                        : "text-white/90 hover:text-white"
+                    }`}
+                  >
+                    {item.label}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                  {isServicesOpen && (
+                    <div className="absolute top-full left-0 pt-2 w-56">
+                      <div className="bg-background rounded-lg shadow-lg border border-border py-2">
+                        {servicePages.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
+                          >
+                            {service.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors ${
+                    isScrolled 
+                      ? "text-muted-foreground hover:text-primary" 
+                      : "text-white/90 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -115,18 +167,36 @@ export function Header({ dictionary, locale }: HeaderProps) {
       </div>
 
       {isMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-background max-h-[80vh] overflow-y-auto">
           <nav className="flex flex-col px-4 py-4">
-            {navItems.map((item) => (
+            {navItems.filter(item => !item.hasDropdown).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="py-3 text-base font-medium text-muted-foreground hover:text-primary transition-colors border-b border-border last:border-0"
+                className="py-3 text-base font-medium text-muted-foreground hover:text-primary transition-colors border-b border-border"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
+            
+            {/* Services submenu mobile */}
+            <div className="py-3 border-b border-border">
+              <span className="text-base font-medium text-foreground">{dictionary.nav.services}</span>
+              <div className="mt-2 pl-4 flex flex-col gap-2">
+                {servicePages.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <div className="mt-4 flex flex-col gap-3">
               <div className="flex justify-center py-2">
                 <LanguageSwitcher currentLocale={locale} isScrolled={true} />

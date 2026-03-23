@@ -75,11 +75,11 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
-  const dict = getDictionary("es")
+  const dictionary = getDictionary("es")
 
   return (
     <main className="min-h-screen bg-background">
-      <Header lang="es" />
+      <Header dictionary={dictionary} locale="es" />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-primary/5 to-background">
@@ -254,8 +254,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer lang="es" />
-      <WhatsAppButton lang="es" />
+      <Footer dictionary={dictionary} locale="es" />
+      <WhatsAppButton dictionary={dictionary} />
     </main>
   )
 }
