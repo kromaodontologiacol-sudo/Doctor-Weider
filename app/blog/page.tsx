@@ -84,12 +84,12 @@ const blogPosts = [
     category: "Proceso"
   },
   {
-    slug: "tipos-implantes-dentales-cual-mejor",
-    title: "Tipos de Implantes Dentales: ¿Cuál es la Mejor Opción?",
-    excerpt: "Guía completa de tipos de implantes dentales: convencionales, carga inmediata, cigomáticos. Cuál elegir según tu caso y presupuesto.",
-    date: "3 Marzo 2026",
-    readTime: "13 min",
-    category: "Tipos"
+    slug: "implantes-dentales-cali-mejor-especialista",
+    title: "Implantes Dentales en Cali: Cómo Elegir al Mejor Especialista",
+    excerpt: "Guía para elegir al mejor especialista en implantes dentales en Cali. Qué buscar, preguntas clave, certificaciones y por qué elegir al Dr. Weider.",
+    date: "5 Marzo 2026",
+    readTime: "11 min",
+    category: "Especialistas"
   },
   {
     slug: "soy-candidato-implante-dental",
@@ -210,7 +210,7 @@ export default function BlogPage() {
                     {post.category === "Durabilidad" && "⏰"}
                     {post.category === "Salud Bucal" && "🏥"}
                     {post.category === "Proceso" && "📋"}
-                    {post.category === "Tipos" && "🔧"}
+                    {post.category === "Especialistas" && "👨‍⚕️"}
                     {post.category === "Candidatos" && "✅"}
                     {post.category === "Cuidados" && "🩺"}
                   </span>
