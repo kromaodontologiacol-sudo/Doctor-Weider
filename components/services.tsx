@@ -109,7 +109,7 @@ export function Services({ dictionary }: ServicesProps) {
                       )}
                       <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                         <a
-                          href={`https://wa.me/573235944931?text=${encodeURIComponent(`${whatsappServiceMessage} ${service.title}`)}`}
+                          href={`https://wa.me/573181898143?text=${encodeURIComponent(`${whatsappServiceMessage} ${service.title}`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >

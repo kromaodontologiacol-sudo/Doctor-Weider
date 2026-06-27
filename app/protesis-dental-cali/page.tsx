@@ -151,7 +151,7 @@ export default function ProtesisDentalPage() {
                     className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                   >
                     <a
-                      href="https://wa.me/573235944931?text=Hola,%20quiero%20información%20sobre%20prótesis%20dental%20en%20Cali"
+                      href="https://wa.me/573181898143?text=Hola,%20quiero%20información%20sobre%20prótesis%20dental%20en%20Cali"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -349,7 +349,7 @@ export default function ProtesisDentalPage() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
               >
                 <a
-                  href="https://wa.me/573235944931?text=Hola,%20quiero%20agendar%20una%20valoración%20para%20prótesis%20dental%20en%20Cali"
+                  href="https://wa.me/573181898143?text=Hola,%20quiero%20agendar%20una%20valoración%20para%20prótesis%20dental%20en%20Cali"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -363,8 +363,8 @@ export default function ProtesisDentalPage() {
                 variant="outline"
                 className="bg-white/10 border-white/30 text-white hover:bg-white/20"
               >
-                <a href="tel:+573235944931">
-                  Llamar: 323 594 4931
+                <a href="tel:+573181898143">
+                  Llamar: 318 189 8143
                 </a>
               </Button>
             </div>

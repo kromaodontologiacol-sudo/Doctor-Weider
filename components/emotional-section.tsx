@@ -99,7 +99,7 @@ export function EmotionalSection({ dictionary }: EmotionalSectionProps) {
             className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-10 py-7 font-semibold"
           >
             <a
-              href={`https://wa.me/573235944931?text=${whatsappMessage}`}
+              href={`https://wa.me/573181898143?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3"

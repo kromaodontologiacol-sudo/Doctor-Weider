@@ -138,7 +138,7 @@ export default function PreciosImplantesPage() {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6"
                 >
                   <a
-                    href="https://wa.me/573235944931?text=Hola,%20quiero%20saber%20el%20precio%20de%20implante%20dental%20en%20Cali"
+                    href="https://wa.me/573181898143?text=Hola,%20quiero%20saber%20el%20precio%20de%20implante%20dental%20en%20Cali"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -213,7 +213,7 @@ export default function PreciosImplantesPage() {
                     className="mt-6 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                   >
                     <a
-                      href="https://wa.me/573235944931?text=Hola,%20quiero%20cotizar%20el%20paquete%20completo%20de%20implante%20%2B%20corona"
+                      href="https://wa.me/573181898143?text=Hola,%20quiero%20cotizar%20el%20paquete%20completo%20de%20implante%20%2B%20corona"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -341,7 +341,7 @@ export default function PreciosImplantesPage() {
                 className="font-semibold"
               >
                 <a
-                  href="https://wa.me/573235944931?text=Hola,%20quiero%20información%20sobre%20opciones%20de%20financiación%20para%20implantes"
+                  href="https://wa.me/573181898143?text=Hola,%20quiero%20información%20sobre%20opciones%20de%20financiación%20para%20implantes"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -369,7 +369,7 @@ export default function PreciosImplantesPage() {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-10 py-7"
             >
               <a
-                href="https://wa.me/573235944931?text=Hola,%20quiero%20saber%20el%20precio%20de%20implante%20dental%20en%20Cali"
+                href="https://wa.me/573181898143?text=Hola,%20quiero%20saber%20el%20precio%20de%20implante%20dental%20en%20Cali"
                 target="_blank"
                 rel="noopener noreferrer"
               >

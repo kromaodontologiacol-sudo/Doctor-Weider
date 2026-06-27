@@ -29,7 +29,7 @@ export function Contact({ dictionary }: ContactProps) {
       ? `Hi, I'm ${formData.name}. ${formData.message}. My email is ${formData.email} and my phone is ${formData.phone}.`
       : `Hola, soy ${formData.name}. ${formData.message}. Mi correo es ${formData.email} y mi teléfono ${formData.phone}.`
     window.open(
-      `https://wa.me/573235944931?text=${encodeURIComponent(whatsappMessage)}`,
+      `https://wa.me/573181898143?text=${encodeURIComponent(whatsappMessage)}`,
       "_blank"
     )
   }
@@ -125,10 +125,10 @@ export function Contact({ dictionary }: ContactProps) {
                   <div>
                     <h4 className="font-semibold text-foreground">{t.phone}</h4>
                     <a
-                      href="tel:+573235944931"
+                      href="tel:+573181898143"
                       className="text-primary hover:underline"
                     >
-                      323 594 4931
+                      318 189 8143
                     </a>
                   </div>
                 </CardContent>
@@ -142,12 +142,12 @@ export function Contact({ dictionary }: ContactProps) {
                   <div>
                     <h4 className="font-semibold text-foreground">{t.whatsapp}</h4>
                     <a
-                      href="https://wa.me/573235944931"
+                      href="https://wa.me/573181898143"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
-                      323 594 4931
+                      318 189 8143
                     </a>
                   </div>
                 </CardContent>
