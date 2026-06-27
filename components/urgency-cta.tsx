@@ -53,7 +53,7 @@ export function UrgencyCta({ dictionary }: UrgencyCtaProps) {
           className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-8 font-bold shadow-2xl"
         >
           <a
-            href={`https://wa.me/573181898143?text=${whatsappMessage}`}
+            href={`https://wa.me/573235944931?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3"

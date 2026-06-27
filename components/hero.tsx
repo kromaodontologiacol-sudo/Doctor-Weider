@@ -86,7 +86,7 @@ export function Hero({ dictionary }: HeroProps) {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-7 font-semibold shadow-xl text-lg w-full sm:w-auto"
               >
                 <a
-                  href={`https://wa.me/573181898143?text=${whatsappMessage}`}
+                  href={`https://wa.me/573235944931?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3"
@@ -104,7 +104,7 @@ export function Hero({ dictionary }: HeroProps) {
                   className="border-white/30 bg-white/10 hover:bg-white/20 text-white text-base px-8 py-7 font-semibold text-lg w-full sm:w-auto"
                 >
                   <a
-                    href={`https://wa.me/573181898143?text=${whatsappMessage}`}
+                    href={`https://wa.me/573235944931?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-3"

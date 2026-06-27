@@ -196,7 +196,7 @@ export function ProthesisForm() {
                   Te recomendamos consultar con un odontólogo presencialmente para evaluar tu caso.
                 </p>
                 <a
-                  href="https://wa.me/573181898143?text=Hola,%20tengo%20dolor%20dental%20y%20necesito%20una%20consulta"
+                  href="https://wa.me/573235944931?text=Hola,%20tengo%20dolor%20dental%20y%20necesito%20una%20consulta"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-2 text-sm text-red-700 underline hover:text-red-800"

@@ -115,18 +115,18 @@ export function Footer({ dictionary, locale }: FooterProps) {
             <h3 className="text-lg font-semibold text-white mb-4">{t.contactTitle}</h3>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
-                <a href="tel:+573181898143" className="hover:text-accent transition-colors">
-                  Tel: 318 189 8143
+                <a href="tel:+573235944931" className="hover:text-accent transition-colors">
+                  Tel: 323 594 4931
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/573181898143"
+                  href="https://wa.me/573235944931"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
-                  WhatsApp: 318 189 8143
+                  WhatsApp: 323 594 4931
                 </a>
               </li>
               <li className="pt-2">

@@ -83,7 +83,7 @@ export default function DentalImplantsPage() {
                     className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                   >
                     <a
-                      href="https://wa.me/573181898143?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants"
+                      href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20dental%20implants"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -225,7 +225,7 @@ export default function DentalImplantsPage() {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
             >
               <a
-                href="https://wa.me/573181898143?text=Hi,%20I%20would%20like%20to%20schedule%20a%20consultation%20for%20dental%20implants"
+                href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20to%20schedule%20a%20consultation%20for%20dental%20implants"
                 target="_blank"
                 rel="noopener noreferrer"
               >

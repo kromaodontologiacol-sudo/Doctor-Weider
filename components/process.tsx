@@ -65,7 +65,7 @@ export function Process({ dictionary }: ProcessProps) {
             className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 py-6 font-semibold shadow-lg"
           >
             <a
-              href={`https://wa.me/573181898143?text=${whatsappMessage}`}
+              href={`https://wa.me/573235944931?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

@@ -145,7 +145,7 @@ export default function DentalImplantPricesPage() {
                       variant={item.featured ? "default" : "outline"}
                     >
                       <a
-                        href={`https://wa.me/573181898143?text=Hi,%20I%20would%20like%20information%20about%20${encodeURIComponent(item.name)}`}
+                        href={`https://wa.me/573235944931?text=Hi,%20I%20would%20like%20information%20about%20${encodeURIComponent(item.name)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -250,7 +250,7 @@ export default function DentalImplantPricesPage() {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
             >
               <a
-                href="https://wa.me/573181898143?text=Hi,%20I%20would%20like%20to%20schedule%20a%20free%20consultation"
+                href="https://wa.me/573235944931?text=Hi,%20I%20would%20like%20to%20schedule%20a%20free%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
               >

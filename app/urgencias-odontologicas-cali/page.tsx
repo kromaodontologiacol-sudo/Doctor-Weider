@@ -10,7 +10,7 @@ import { MessageCircle, ChevronRight, Phone, Clock, AlertTriangle, Zap, ShieldCh
 
 export const metadata: Metadata = {
   title: "Urgencias Odontológicas en Cali - Atención Inmediata 24h | Dr. Weider",
-  description: "Urgencias dentales en Cali: dolor dental intenso, infecciones, fracturas dentales, inflamación. Atención prioritaria inmediata. Llama ahora: 318 189 8143.",
+  description: "Urgencias dentales en Cali: dolor dental intenso, infecciones, fracturas dentales, inflamación. Atención prioritaria inmediata. Llama ahora: 323 594 4931.",
   keywords: "urgencias odontológicas cali, dentista urgencia cali, dolor de muela cali, emergencia dental cali, diente roto cali, infección dental cali",
   openGraph: {
     title: "Urgencias Odontológicas en Cali - Atención Inmediata",
@@ -119,7 +119,7 @@ export default function UrgenciasPage() {
                   className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-lg px-8 py-6"
                 >
                   <a
-                    href="https://wa.me/573181898143?text=URGENCIA:%20Necesito%20atención%20dental%20inmediata"
+                    href="https://wa.me/573235944931?text=URGENCIA:%20Necesito%20atención%20dental%20inmediata"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -133,9 +133,9 @@ export default function UrgenciasPage() {
                   variant="outline"
                   className="border-white text-white hover:bg-white hover:text-red-600 font-semibold"
                 >
-                  <a href="tel:+573181898143">
+                  <a href="tel:+573235944931">
                     <Phone className="w-5 h-5 mr-2" />
-                    Llamar: 318 189 8143
+                    Llamar: 323 594 4931
                   </a>
                 </Button>
               </div>
@@ -284,7 +284,7 @@ export default function UrgenciasPage() {
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-10 py-7"
               >
                 <a
-                  href="https://wa.me/573181898143?text=URGENCIA:%20Necesito%20atención%20dental%20inmediata"
+                  href="https://wa.me/573235944931?text=URGENCIA:%20Necesito%20atención%20dental%20inmediata"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -297,9 +297,9 @@ export default function UrgenciasPage() {
                 size="lg"
                 className="bg-white hover:bg-gray-100 text-red-600 font-bold text-lg px-10 py-7"
               >
-                <a href="tel:+573181898143">
+                <a href="tel:+573235944931">
                   <Phone className="w-6 h-6 mr-2" />
-                  318 189 8143
+                  323 594 4931
                 </a>
               </Button>
             </div>
