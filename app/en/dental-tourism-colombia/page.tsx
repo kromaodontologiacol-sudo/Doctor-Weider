@@ -127,7 +127,7 @@ export default function DentalTourismPage() {
                     className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                   >
                     <a
-                      href="https://wa.me/573235944931?text=Hi,%20I'm%20interested%20in%20dental%20tourism%20to%20Colombia"
+                      href="https://wa.me/573181898143?text=Hi,%20I'm%20interested%20in%20dental%20tourism%20to%20Colombia"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -241,7 +241,7 @@ export default function DentalTourismPage() {
                       variant="outline"
                     >
                       <a
-                        href={`https://wa.me/573235944931?text=Hi,%20I'm%20interested%20in%20the%20${encodeURIComponent(pkg.name)}`}
+                        href={`https://wa.me/573181898143?text=Hi,%20I'm%20interested%20in%20the%20${encodeURIComponent(pkg.name)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -325,7 +325,7 @@ export default function DentalTourismPage() {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
             >
               <a
-                href="https://wa.me/573235944931?text=Hi,%20I'd%20like%20a%20free%20quote%20for%20dental%20treatment%20in%20Colombia"
+                href="https://wa.me/573181898143?text=Hi,%20I'd%20like%20a%20free%20quote%20for%20dental%20treatment%20in%20Colombia"
                 target="_blank"
                 rel="noopener noreferrer"
               >

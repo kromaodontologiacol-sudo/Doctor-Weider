@@ -131,20 +131,20 @@ export function Header({ dictionary, locale }: HeaderProps) {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher currentLocale={locale} isScrolled={isScrolled} />
             <a
-              href="tel:+573235944931"
+              href="tel:+573181898143"
               className={`flex items-center gap-2 text-sm font-medium ${
                 isScrolled ? "text-primary" : "text-white"
               }`}
             >
               <Phone className="h-4 w-4" />
-              323 594 4931
+              318 189 8143
             </a>
             <Button 
               asChild 
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
             >
               <a
-                href={`https://wa.me/573235944931?text=${whatsappMessage}`}
+                href={`https://wa.me/573181898143?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -203,15 +203,15 @@ export function Header({ dictionary, locale }: HeaderProps) {
                 <LanguageSwitcher currentLocale={locale} isScrolled={true} />
               </div>
               <a
-                href="tel:+573235944931"
+                href="tel:+573181898143"
                 className="flex items-center justify-center gap-2 text-base font-medium text-primary"
               >
                 <Phone className="h-5 w-5" />
-                323 594 4931
+                318 189 8143
               </a>
               <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 <a
-                  href={`https://wa.me/573235944931?text=${whatsappMessage}`}
+                  href={`https://wa.me/573181898143?text=${whatsappMessage}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

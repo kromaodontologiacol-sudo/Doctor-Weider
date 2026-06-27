@@ -174,7 +174,7 @@ export default function ImplantesDentalesPage() {
                     className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold"
                   >
                     <a
-                      href="https://wa.me/573235944931?text=Hola,%20quiero%20información%20sobre%20implantes%20dentales%20en%20Cali"
+                      href="https://wa.me/573181898143?text=Hola,%20quiero%20información%20sobre%20implantes%20dentales%20en%20Cali"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -377,7 +377,7 @@ export default function ImplantesDentalesPage() {
                 </Button>
                 <Button asChild size="lg" variant="outline" className="font-semibold">
                   <a
-                    href="https://wa.me/573235944931?text=Hola,%20quiero%20cotizar%20un%20implante%20dental"
+                    href="https://wa.me/573181898143?text=Hola,%20quiero%20cotizar%20un%20implante%20dental"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -483,7 +483,7 @@ export default function ImplantesDentalesPage() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6"
               >
                 <a
-                  href="https://wa.me/573235944931?text=Hola,%20quiero%20información%20sobre%20implantes%20dentales%20en%20Cali"
+                  href="https://wa.me/573181898143?text=Hola,%20quiero%20información%20sobre%20implantes%20dentales%20en%20Cali"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -498,7 +498,7 @@ export default function ImplantesDentalesPage() {
                 className="border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6"
               >
                 <a
-                  href="https://wa.me/573235944931?text=Hola,%20quiero%20hablar%20con%20el%20especialista%20sobre%20implantes"
+                  href="https://wa.me/573181898143?text=Hola,%20quiero%20hablar%20con%20el%20especialista%20sobre%20implantes"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
